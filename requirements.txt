@@ -1,0 +1,1 @@
+# No third-party packages: the desk uses only the Python standard library (Python 3.9+).

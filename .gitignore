@@ -1,0 +1,11 @@
+# Secrets (SEC User-Agent, API keys)
+.env
+.env.*
+
+# Copyrighted paper: not redistributed in this public repo
+FRL-CanAIReplaceAnalyst.pdf
+
+# Python
+__pycache__/
+*.pyc
+.venv/
