@@ -1,7 +1,7 @@
 {
-  "run_time": "2026-10-27T08:54:55",
+  "run_time": "2026-10-29T10:20:28",
   "ticker": "COST",
-  "price": null,
+  "price": 992.13,
   "peers_requested": [
     "WMT",
     "TGT",
@@ -376,28 +376,41 @@
       "note": ""
     },
     "pe": {
-      "value": null,
+      "value": 47.79046242774566,
       "formula": "Share price / Diluted EPS",
-      "arithmetic": "",
-      "note": "No share price supplied."
+      "arithmetic": "992.13 / 20.76 = 47.79x",
+      "note": ""
     }
   },
   "release_lines": {
     "revenue": [
       {
-        "line": 13,
+        "line": 16,
         "text": "Net sales for the quarter increased 11.2 percent, to $93.9 billion, from $84.4 billion last year. Net sales for the fiscal year increased 10.1 percent, to $297.2 billion, from $269.9 billion last year."
       },
       {
-        "line": 67,
-        "text": "Net sales | $93,873 | $84,432 | $297,247 | $269,912"
+        "line": 74,
+        "text": "Total revenue | 95,723 | 86,156 | 303,154 | 275,235"
       },
       {
-        "line": 71,
-        "text": "Total revenue | 95,723 | 86,156 | 303,154 | 275,235"
+        "line": 70,
+        "text": "Net sales | $93,873 | $84,432 | $297,247 | $269,912"
       }
     ],
-    "eps": []
+    "eps": [
+      {
+        "line": 36,
+        "text": "Net income for the fourth quarter was $2.998 billion, $6.75 per diluted share, compared to $2.610 billion, $5.87 per diluted share, last year."
+      },
+      {
+        "line": 36,
+        "text": "This year's fourth quarter was positively impacted by a non-recurring benefit of $0.15 per diluted share from IEEPA tariff refunds received in the quarter, less partial reinvestment of those refunds in increased member values."
+      },
+      {
+        "line": 100,
+        "text": "Diluted | $6.75 | $5.87 | $20.76 | $18.21"
+      }
+    ]
   },
   "peers": {
     "WMT": {

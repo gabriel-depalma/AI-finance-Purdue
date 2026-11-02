@@ -10,22 +10,26 @@ from urllib.request import Request, urlopen
 HERE = Path(__file__).resolve().parent
 
 
-def read_user_agent(folder=HERE):
-    """Return SEC_USER_AGENT from the .env file in `folder`; exit with a message if missing."""
+def read_env(name, hint, folder=HERE):
+    """Return the value of `name` from the .env file in `folder`; exit with `hint` if missing."""
     path = Path(folder) / ".env"
     if not path.is_file():
-        raise SystemExit(f"No .env file at {path}. Add a line: SEC_USER_AGENT=Your Name your@email")
+        raise SystemExit(f"No .env file at {path}. {hint}")
     for line in path.read_text(encoding="utf-8-sig").splitlines():
         line = line.strip()
         if not line or line.startswith("#") or "=" not in line:
             continue
         key, value = line.split("=", 1)
-        key = key.strip().removeprefix("export ").strip()
-        if key == "SEC_USER_AGENT":
+        if key.strip().removeprefix("export ").strip() == name:
             value = value.strip().strip('"').strip("'")
             if value:
                 return value
-    raise SystemExit(f"SEC_USER_AGENT is missing or empty in {path}. SEC requires a name and contact email.")
+    raise SystemExit(f"{name} is missing or empty in {path}. {hint}")
+
+
+def read_user_agent(folder=HERE):
+    """Return SEC_USER_AGENT from .env; SEC requires a name and contact email."""
+    return read_env("SEC_USER_AGENT", "Add a line: SEC_USER_AGENT=Your Name your@email", folder)
 
 
 class SecClient:

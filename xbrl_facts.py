@@ -31,7 +31,7 @@ CONCEPTS = [
     ("lt_debt", "Long-term debt (noncurrent)", "instant", "USD",
      ["LongTermDebtNoncurrent", "LongTermDebtAndCapitalLeaseObligations"]),
     ("lt_debt_current", "Current portion of long-term debt", "instant", "USD",
-     ["LongTermDebtCurrent", "LongTermDebtAndCapitalLeaseObligationsCurrent"]),
+     ["LongTermDebtCurrent", "LongTermDebtAndCapitalLeaseObligationsCurrent", "DebtCurrent"]),
     ("cfo", "Cash from operations", "duration", "USD",
      ["NetCashProvidedByUsedInOperatingActivities",
       "NetCashProvidedByUsedInOperatingActivitiesContinuingOperations"]),

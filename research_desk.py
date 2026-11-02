@@ -4,7 +4,8 @@ Usage:
     python research_desk.py TICKER [--peers T1 T2 ...] [--price P] [--step N]
 
 Steps: (1) ticker -> CIK, (2) latest 10-K / 10-Q / Item 2.02 8-K, (3) download documents as text,
-(4) XBRL facts, (5) calculator, (6) release lines for revenue and diluted EPS, (7) peers.
+(4) XBRL facts, (5) calculator, (6) release lines for revenue and diluted EPS, (7) peers,
+(8) the four roles of Figure 1 write the report (needs API_KEY in .env).
 """
 import argparse
 import json
@@ -24,8 +25,9 @@ STEP_TITLES = {
     5: "Calculator",
     6: "Earnings release: quarter's total revenue and diluted EPS",
     7: "Peers",
+    8: "Report: the four roles (Francis & Zhang 2026, Figure 1)",
 }
-DEPENDS = {1: [], 2: [1], 3: [2], 4: [1], 5: [4], 6: [2], 7: []}
+DEPENDS = {1: [], 2: [1], 3: [2], 4: [1], 5: [4], 6: [2], 7: [], 8: [3, 5, 6, 7]}
 DOC_FILES = {"10-K": "10-K.txt", "10-Q": "10-Q.txt", "8-K": "8-K_EX-99.1_release.txt"}
 
 
@@ -86,11 +88,11 @@ class Desk:
             return self.saved_texts[form]
         f = self.filings[form]
         doc_url = f["exhibit"]["url"] if form == "8-K" else f["doc_url"]
-        text = edgar_docs.document_text(self.sec, doc_url)
         header = (f"Source: {doc_url}\nForm: {form}  Accession: {f['accession']}  "
                   f"Accepted: {f['accepted']}\n{'-' * 80}\n")
+        text = header + edgar_docs.document_text(self.sec, doc_url)  # line numbers match the saved file
         path = self.folder() / DOC_FILES[form]
-        path.write_text(header + text, encoding="utf-8")
+        path.write_text(text, encoding="utf-8")
         self.saved_texts[form] = (path, text, doc_url)
         return self.saved_texts[form]
 
@@ -154,8 +156,8 @@ class Desk:
                 self.say(f"{indent}    note: {c['note']}")
 
     def step4(self):
-        cf = xbrl_facts.fetch_company_facts(self.sec, self.company["cik"])
-        self.facts = xbrl_facts.extract(cf)
+        self.company_facts = xbrl_facts.fetch_company_facts(self.sec, self.company["cik"])
+        self.facts = xbrl_facts.extract(self.company_facts)
         self.say(f"  source: https://data.sec.gov/api/xbrl/companyfacts/CIK{self.company['cik']:010d}.json")
         self.print_facts(self.facts)
         self.record["facts"] = self.facts
@@ -232,6 +234,12 @@ class Desk:
         self.say(f"  saved -> {self.save_record()}")
         return results
 
+    def step8(self):
+        import desk_roles  # needs the openai package; steps 1-7 do not
+        path = desk_roles.run_report(self, self.args.model)
+        self.say(f"  report -> {path}")
+        return path
+
 
 def main(argv=None):
     if hasattr(sys.stdout, "reconfigure"):
@@ -241,12 +249,15 @@ def main(argv=None):
     parser.add_argument("--peers", nargs="+", default=[], metavar="TICKER",
                         help="peer tickers, space- or comma-separated")
     parser.add_argument("--price", type=float, help="share price, for P/E")
-    parser.add_argument("--step", type=int, choices=range(1, 8), metavar="N", help="run only step N (1-7)")
+    parser.add_argument("--step", type=int, choices=range(1, 9), metavar="N",
+                        help="run only step N (1-7 data, 8 report)")
+    parser.add_argument("--model", default="gpt-oss:120b",
+                        help="Purdue GenAI Studio model for the four roles (default gpt-oss:120b)")
     args = parser.parse_args(argv)
     args.peers = [p.strip().upper() for arg in args.peers for p in arg.split(",") if p.strip()]
 
     desk = Desk(args, SecClient(read_user_agent()))
-    for n in ([args.step] if args.step else range(1, 8)):
+    for n in ([args.step] if args.step else range(1, 9)):
         desk.run(n)
     if desk._folder is not None:
         print(f"\nOutput folder: {desk._folder}")

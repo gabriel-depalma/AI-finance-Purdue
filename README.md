@@ -2,20 +2,22 @@
 
 The data layer of a multi-agent equity-research desk, modeled on Section 3.1 of
 Francis & Zhang (2026), "Can AI match professional analysts? Evidence from a multi-agent system,"
-*Finance Research Letters* 103, 110127. The model roles come later.
+*Finance Research Letters* 103, 110127, with the paper's four roles (Figure 1) on top as step 8.
 
 ## Setup
 
-Python 3.9+, standard library only:
+Python 3.10+. Steps 1-7 use only the standard library; step 8 needs the OpenAI SDK, which talks to
+Purdue GenAI Studio's OpenAI-compatible API:
 
 ```
 python -m pip install -r requirements.txt
 ```
 
-Create a `.env` file in this folder with your SEC contact details (it is git-ignored):
+Create a `.env` file in this folder (it is git-ignored):
 
 ```
 SEC_USER_AGENT=Your Name your.email@example.com
+API_KEY=sk-...   # Purdue GenAI Studio: Settings > Account > API Key
 ```
 
 ## Run
@@ -24,7 +26,7 @@ SEC_USER_AGENT=Your Name your.email@example.com
 python research_desk.py COST --peers WMT,TGT,BJ --price 1005.16
 ```
 
-Put the ticker first. `--step N` runs one step only (1-7).
+Put the ticker first. `--step N` runs one step only (1-8); `--step 8` runs steps 1-7 quietly first.
 
 | Step | What it does |
 |---|---|
@@ -35,6 +37,7 @@ Put the ticker first. `--step N` runs one step only (1-7).
 | 5 | Calculator: revenue growth, operating margin, ROAE, debt/equity, free cash flow, P/E |
 | 6 | Release lines stating the quarter's total revenue and diluted EPS |
 | 7 | The same facts and operating margin for each peer |
+| 8 | The four roles write `report.md`: Research Analyst, Financial Analyst (with the calculator as a tool), Investment Advisor, and the Strategy Manager, who checks the five parts, sends failing parts back once, and compiles the report |
 
 Facts, calculations, release lines and peers are saved as `facts.json` beside the texts.
 
@@ -43,6 +46,7 @@ Facts, calculations, release lines and peers are saved as `facts.json` beside th
 - `research_desk.py`: command line and the seven steps
 - `edgar_docs.py`: EDGAR filings, index pages, HTML-to-text, release lines
 - `xbrl_facts.py`: XBRL tag selection and the calculator
+- `desk_roles.py`: the four roles (Purdue GenAI Studio, default model `gpt-oss:120b`; change with `--model`), the calculator tool and the checks run in code
 - `sec_client.py`: `.env` reader and rate-limited SEC client
 - `library/`: the build prompt, rewritten in ASD-STE100 Simplified Technical English
 - `runs/`: example output

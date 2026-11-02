@@ -361,7 +361,8 @@ def release_lines(text):
     hits = {"revenue": [], "eps": []}  # entries: (score, lineno, order, unit)
     order = 0
     for lineno, line in enumerate(lines, 1):
-        units = SENTENCE_SPLIT.split(line) if len(line) > 300 else [line]
+        units = [s for b in re.split(r"\s*[•●▪]\s*", line)
+                 for s in (SENTENCE_SPLIT.split(b) if len(b) > 300 else [b])]
         for unit in units:
             unit = unit.strip()
             if not unit or FORWARD_RE.search(unit):
@@ -373,6 +374,8 @@ def release_lines(text):
             if REV_RE.search(unit) and AMOUNT_RE.search(unit) and not REV_EXCLUDE.search(unit):
                 table_label = label is not None and REV_LABEL_CELL.fullmatch(label)
                 score = 3 if narrative_q else 2 if table_label else 1
+                if table_label and label.lower().startswith("total"):
+                    score = 2.5  # a "Total revenues" row outranks segment "Net sales" rows
                 hits["revenue"].append((score, lineno, order, unit))
 
             if EPS_RE.search(unit) and DECIMAL_RE.search(unit):
