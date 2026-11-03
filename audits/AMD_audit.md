@@ -2,7 +2,7 @@
 
 Marked by hand by Gabriel DePalma. No AI for the marks.
 
-**Errors (wrong + unsupported): __   Missing: __**
+**Errors (wrong + unsupported): \_0\_   Missing: \_\_1**
 
 Marks: Correct (matches the filing after rounding) · Wrong (write the filing's number beside it) ·
 Unsupported (a number the filings do not contain, or a different definition) · Missing (the report does not state it) ·
@@ -26,9 +26,9 @@ Not in filings (the filings do not state it and the report gives no number)
 
 ## Every other number in the Financial Analyst's part (peers, extra ratios, P/E)
 
-| # | Claim | Report said | Filing says | Mark | Where |
-|---|---|---|---|---|---|
-| | | | | | |
+| #   | Claim                                          | Report said                  | Filing says              | Mark    | Where |
+| --- | ---------------------------------------------- | ---------------------------- | ------------------------ | ------- | ----- |
+|     | Micron, Sandisk, Intel previous revenue growth | **256.33%, 175.30%, ‑0.47%** | 256.33%, 175.3%, -0.47%. | Correct | 10k   |
 
 ## Template and recommendation
 
