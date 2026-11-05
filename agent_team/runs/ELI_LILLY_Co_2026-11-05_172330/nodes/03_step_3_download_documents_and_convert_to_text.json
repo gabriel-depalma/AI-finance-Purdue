@@ -1,0 +1,20 @@
+{
+  "node": "Step 3 Download documents and convert to text",
+  "input": {
+    "ticker": "LLY",
+    "peers": [
+      "MRK",
+      "PFE",
+      "ABBV"
+    ],
+    "price": 1367.71,
+    "uses_steps": [
+      2
+    ]
+  },
+  "output": {
+    "10-K": "C:\\Users\\gabed\\OneDrive\\Documents\\Ai in Finance\\agent_team\\runs\\ELI_LILLY_Co_2026-11-05_172330\\10-K.txt",
+    "10-Q": "C:\\Users\\gabed\\OneDrive\\Documents\\Ai in Finance\\agent_team\\runs\\ELI_LILLY_Co_2026-11-05_172330\\10-Q.txt",
+    "8-K": "C:\\Users\\gabed\\OneDrive\\Documents\\Ai in Finance\\agent_team\\runs\\ELI_LILLY_Co_2026-11-05_172330\\8-K_EX-99.1_release.txt"
+  }
+}

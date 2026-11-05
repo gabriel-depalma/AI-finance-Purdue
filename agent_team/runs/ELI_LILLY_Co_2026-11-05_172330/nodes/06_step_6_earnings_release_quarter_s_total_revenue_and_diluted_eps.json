@@ -1,0 +1,53 @@
+{
+  "node": "Step 6 Earnings release: quarter's total revenue and diluted EPS",
+  "input": {
+    "ticker": "LLY",
+    "peers": [
+      "MRK",
+      "PFE",
+      "ABBV"
+    ],
+    "price": 1367.71,
+    "uses_steps": [
+      2
+    ]
+  },
+  "output": {
+    "revenue": [
+      [
+        88,
+        "On a non-GAAP basis, Q3 2026 gross margin increased 40% to $20.6 billion. Gross margin as a percent of revenue was 84.4%, an increase of 0.8 percentage points versus the same quarter last year. The"
+      ],
+      [
+        146,
+        "Total Revenue | 24,397 | 17,601 | 39% | 67,170 | 45,887 | 46%"
+      ],
+      [
+        46,
+        "Revenue | $24,397 | $17,601 | 39%"
+      ],
+      [
+        224,
+        "Revenue | $85 to $87 billion | $91 to $92 billion"
+      ],
+      [
+        284,
+        "Revenue | $24,397 | $17,601 | 39% | $67,170 | $45,887 | 46%"
+      ]
+    ],
+    "eps": [
+      [
+        310,
+        "Earnings per share - diluted | $7.22 | $6.21 | 16% | $23.42 | $15.56 | 51%"
+      ],
+      [
+        376,
+        "Earnings per share (diluted) - Reported | $7.22 | $6.21 | $23.42 | $15.56"
+      ],
+      [
+        378,
+        "Earnings per share (diluted) - Non-GAAP | $7.48 | $7.02 | $24.41 | $16.67"
+      ]
+    ]
+  }
+}

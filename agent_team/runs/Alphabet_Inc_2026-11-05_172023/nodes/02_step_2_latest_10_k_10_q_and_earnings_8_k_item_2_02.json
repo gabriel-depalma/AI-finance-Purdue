@@ -1,0 +1,51 @@
+{
+  "node": "Step 2 Latest 10-K, 10-Q and earnings 8-K (Item 2.02)",
+  "input": {
+    "ticker": "GOOG",
+    "peers": [
+      "AAPL",
+      "MSFT",
+      "META"
+    ],
+    "price": 281.74,
+    "uses_steps": [
+      1
+    ]
+  },
+  "output": {
+    "10-K": {
+      "accession": "0001652044-26-000018",
+      "filing_date": "2026-02-05",
+      "report_date": "2025-12-31",
+      "accepted": "2026-02-04 21:56:03",
+      "index_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/0001652044-26-000018-index.htm",
+      "doc_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231.htm",
+      "items": ""
+    },
+    "10-Q": {
+      "accession": "0001652044-26-000084",
+      "filing_date": "2026-10-29",
+      "report_date": "2026-09-30",
+      "accepted": "2026-10-28 20:29:06",
+      "index_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000084/0001652044-26-000084-index.htm",
+      "doc_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000084/goog-20260930.htm",
+      "items": ""
+    },
+    "8-K": {
+      "accession": "0001652044-26-000080",
+      "filing_date": "2026-10-28",
+      "report_date": "2026-10-28",
+      "accepted": "2026-10-28 16:01:33",
+      "index_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000080/0001652044-26-000080-index.htm",
+      "doc_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000080/goog-20261028.htm",
+      "items": "2.02,9.01",
+      "exhibit": {
+        "seq": "2",
+        "description": "EX-99.1",
+        "name": "googexhibit991q32026.htm",
+        "type": "EX-99.1",
+        "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000080/googexhibit991q32026.htm"
+      }
+    }
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "node": "Step 5 Calculator",
+  "input": {
+    "ticker": "GOOG",
+    "peers": [
+      "AAPL",
+      "MSFT",
+      "META"
+    ],
+    "price": 281.74,
+    "uses_steps": [
+      4
+    ]
+  },
+  "output": {
+    "revenue_growth": {
+      "value": 0.15090081081544376,
+      "formula": "(Revenue FY - Revenue prior FY) / Revenue prior FY",
+      "arithmetic": "(402,836.0 - 350,018.0) / 350,018.0 = 15.09%",
+      "note": ""
+    },
+    "operating_margin": {
+      "value": 0.32032638592380025,
+      "formula": "Operating income / Revenue",
+      "arithmetic": "129,039.0 / 402,836.0 = 32.03%",
+      "note": ""
+    },
+    "roae": {
+      "value": 0.3570478247421149,
+      "formula": "Net income / ((Equity FY + Equity prior FY) / 2)",
+      "arithmetic": "132,170.0 / ((415,265.0 + 325,084.0) / 2) = 35.70%",
+      "note": ""
+    },
+    "debt_to_equity": {
+      "value": 0.11689643962289141,
+      "formula": "(Long-term debt noncurrent + Current portion of LTD) / Equity FY",
+      "arithmetic": "(46,547.0 + 1,996.0) / 415,265.0 = 0.12x",
+      "note": ""
+    },
+    "fcf": {
+      "value": 73266000000,
+      "formula": "Cash from operations - Capital expenditures",
+      "arithmetic": "164,713.0 - 91,447.0 = 73,266.0",
+      "note": ""
+    },
+    "pe": {
+      "value": 26.06290471785384,
+      "formula": "Share price / Diluted EPS",
+      "arithmetic": "281.74 / 10.81 = 26.06x",
+      "note": ""
+    }
+  }
+}

@@ -1,0 +1,4 @@
+# Agent team (Lab 04): CrewAI Flows. Needs Python 3.10-3.13 (CrewAI has no 3.15 release).
+# Install: uv venv --python 3.13 .venv  then  uv pip install --python .venv/Scripts/python.exe -r requirements.txt
+crewai>=1.15.34
+python-dotenv

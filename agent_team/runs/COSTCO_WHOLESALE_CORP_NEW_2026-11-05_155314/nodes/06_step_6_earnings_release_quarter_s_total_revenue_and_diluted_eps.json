@@ -1,0 +1,45 @@
+{
+  "node": "Step 6 Earnings release: quarter's total revenue and diluted EPS",
+  "input": {
+    "ticker": "COST",
+    "peers": [
+      "WMT",
+      "TGT",
+      "BJ"
+    ],
+    "price": 992.13,
+    "uses_steps": [
+      2
+    ]
+  },
+  "output": {
+    "revenue": [
+      [
+        16,
+        "Net sales for the quarter increased 11.2 percent, to $93.9 billion, from $84.4 billion last year. Net sales for the fiscal year increased 10.1 percent, to $297.2 billion, from $269.9 billion last year."
+      ],
+      [
+        74,
+        "Total revenue | 95,723 | 86,156 | 303,154 | 275,235"
+      ],
+      [
+        70,
+        "Net sales | $93,873 | $84,432 | $297,247 | $269,912"
+      ]
+    ],
+    "eps": [
+      [
+        36,
+        "Net income for the fourth quarter was $2.998 billion, $6.75 per diluted share, compared to $2.610 billion, $5.87 per diluted share, last year."
+      ],
+      [
+        36,
+        "This year's fourth quarter was positively impacted by a non-recurring benefit of $0.15 per diluted share from IEEPA tariff refunds received in the quarter, less partial reinvestment of those refunds in increased member values."
+      ],
+      [
+        100,
+        "Diluted | $6.75 | $5.87 | $20.76 | $18.21"
+      ]
+    ]
+  }
+}

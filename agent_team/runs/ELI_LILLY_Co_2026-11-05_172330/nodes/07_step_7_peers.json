@@ -1,0 +1,909 @@
+{
+  "node": "Step 7 Peers",
+  "input": {
+    "ticker": "LLY",
+    "peers": [
+      "MRK",
+      "PFE",
+      "ABBV"
+    ],
+    "price": 1367.71,
+    "uses_steps": []
+  },
+  "output": {
+    "MRK": {
+      "cik": 310158,
+      "company": "Merck & Co., Inc.",
+      "facts": {
+        "entity": "Merck & Co., Inc.",
+        "fy_end": "2025-12-31",
+        "prior_end": "2024-12-31",
+        "anchor": "revenue",
+        "concepts": {
+          "revenue": {
+            "label": "Total revenue",
+            "kind": "duration",
+            "unit": "USD",
+            "candidates": [
+              "Revenues",
+              "RevenueFromContractWithCustomerExcludingAssessedTax",
+              "RevenueFromContractWithCustomerIncludingAssessedTax",
+              "SalesRevenueNet",
+              "RevenuesNetOfInterestExpense"
+            ],
+            "tag": "Revenues",
+            "tag_latest": "2025-12-31",
+            "fy": {
+              "value": 65011000000,
+              "start": "2025-01-01",
+              "end": "2025-12-31",
+              "tag": "Revenues",
+              "unit": "USD",
+              "accn": "0000310158-26-000063",
+              "form": "10-K",
+              "filed": "2026-02-24"
+            },
+            "prior": {
+              "value": 64168000000,
+              "start": "2024-01-01",
+              "end": "2024-12-31",
+              "tag": "Revenues",
+              "unit": "USD",
+              "accn": "0000310158-26-000063",
+              "form": "10-K",
+              "filed": "2026-02-24"
+            },
+            "note": ""
+          },
+          "operating_income": {
+            "label": "Operating income",
+            "kind": "duration",
+            "unit": "USD",
+            "candidates": [
+              "OperatingIncomeLoss"
+            ],
+            "tag": null,
+            "tag_latest": null,
+            "fy": null,
+            "prior": null,
+            "note": "No annual 10-K data for any candidate tag."
+          },
+          "net_income": {
+            "label": "Net income",
+            "kind": "duration",
+            "unit": "USD",
+            "candidates": [
+              "NetIncomeLoss",
+              "ProfitLoss",
+              "NetIncomeLossAvailableToCommonStockholdersBasic"
+            ],
+            "tag": "NetIncomeLoss",
+            "tag_latest": "2025-12-31",
+            "fy": {
+              "value": 18254000000,
+              "start": "2025-01-01",
+              "end": "2025-12-31",
+              "tag": "NetIncomeLoss",
+              "unit": "USD",
+              "accn": "0000310158-26-000063",
+              "form": "10-K",
+              "filed": "2026-02-24"
+            },
+            "prior": {
+              "value": 17117000000,
+              "start": "2024-01-01",
+              "end": "2024-12-31",
+              "tag": "NetIncomeLoss",
+              "unit": "USD",
+              "accn": "0000310158-26-000063",
+              "form": "10-K",
+              "filed": "2026-02-24"
+            },
+            "note": ""
+          },
+          "eps_diluted": {
+            "label": "Diluted EPS",
+            "kind": "duration",
+            "unit": "USD/shares",
+            "candidates": [
+              "EarningsPerShareDiluted",
+              "EarningsPerShareBasicAndDiluted"
+            ],
+            "tag": "EarningsPerShareDiluted",
+            "tag_latest": "2025-12-31",
+            "fy": {
+              "value": 7.28,
+              "start": "2025-01-01",
+              "end": "2025-12-31",
+              "tag": "EarningsPerShareDiluted",
+              "unit": "USD/shares",
+              "accn": "0000310158-26-000063",
+              "form": "10-K",
+              "filed": "2026-02-24"
+            },
+            "prior": {
+              "value": 6.74,
+              "start": "2024-01-01",
+              "end": "2024-12-31",
+              "tag": "EarningsPerShareDiluted",
+              "unit": "USD/shares",
+              "accn": "0000310158-26-000063",
+              "form": "10-K",
+              "filed": "2026-02-24"
+            },
+            "note": ""
+          },
+          "equity": {
+            "label": "Stockholders' equity",
+            "kind": "instant",
+            "unit": "USD",
+            "candidates": [
+              "StockholdersEquity",
+              "StockholdersEquityIncludingPortionAttributableToNoncontrollingInterest"
+            ],
+            "tag": "StockholdersEquity",
+            "tag_latest": "2025-12-31",
+            "fy": {
+              "value": 52606000000,
+              "start": null,
+              "end": "2025-12-31",
+              "tag": "StockholdersEquity",
+              "unit": "USD",
+              "accn": "0000310158-26-000063",
+              "form": "10-K",
+              "filed": "2026-02-24"
+            },
+            "prior": {
+              "value": 46313000000,
+              "start": null,
+              "end": "2024-12-31",
+              "tag": "StockholdersEquity",
+              "unit": "USD",
+              "accn": "0000310158-26-000063",
+              "form": "10-K",
+              "filed": "2026-02-24"
+            },
+            "note": ""
+          },
+          "lt_debt": {
+            "label": "Long-term debt (noncurrent)",
+            "kind": "instant",
+            "unit": "USD",
+            "candidates": [
+              "LongTermDebtNoncurrent",
+              "LongTermDebtAndCapitalLeaseObligations"
+            ],
+            "tag": "LongTermDebtNoncurrent",
+            "tag_latest": "2025-12-31",
+            "fy": {
+              "value": 46750000000,
+              "start": null,
+              "end": "2025-12-31",
+              "tag": "LongTermDebtNoncurrent",
+              "unit": "USD",
+              "accn": "0000310158-26-000063",
+              "form": "10-K",
+              "filed": "2026-02-24"
+            },
+            "prior": {
+              "value": 34462000000,
+              "start": null,
+              "end": "2024-12-31",
+              "tag": "LongTermDebtNoncurrent",
+              "unit": "USD",
+              "accn": "0000310158-26-000063",
+              "form": "10-K",
+              "filed": "2026-02-24"
+            },
+            "note": ""
+          },
+          "lt_debt_current": {
+            "label": "Current portion of long-term debt",
+            "kind": "instant",
+            "unit": "USD",
+            "candidates": [
+              "LongTermDebtCurrent",
+              "LongTermDebtAndCapitalLeaseObligationsCurrent",
+              "DebtCurrent"
+            ],
+            "tag": "LongTermDebtCurrent",
+            "tag_latest": "2025-12-31",
+            "fy": {
+              "value": 2300000000,
+              "start": null,
+              "end": "2025-12-31",
+              "tag": "LongTermDebtCurrent",
+              "unit": "USD",
+              "accn": "0000310158-26-000063",
+              "form": "10-K",
+              "filed": "2026-02-24"
+            },
+            "prior": {
+              "value": 2500000000,
+              "start": null,
+              "end": "2024-12-31",
+              "tag": "LongTermDebtCurrent",
+              "unit": "USD",
+              "accn": "0000310158-26-000063",
+              "form": "10-K",
+              "filed": "2026-02-24"
+            },
+            "note": ""
+          },
+          "cfo": {
+            "label": "Cash from operations",
+            "kind": "duration",
+            "unit": "USD",
+            "candidates": [
+              "NetCashProvidedByUsedInOperatingActivities",
+              "NetCashProvidedByUsedInOperatingActivitiesContinuingOperations"
+            ],
+            "tag": "NetCashProvidedByUsedInOperatingActivities",
+            "tag_latest": "2025-12-31",
+            "fy": {
+              "value": 16472000000,
+              "start": "2025-01-01",
+              "end": "2025-12-31",
+              "tag": "NetCashProvidedByUsedInOperatingActivities",
+              "unit": "USD",
+              "accn": "0000310158-26-000063",
+              "form": "10-K",
+              "filed": "2026-02-24"
+            },
+            "prior": {
+              "value": 21468000000,
+              "start": "2024-01-01",
+              "end": "2024-12-31",
+              "tag": "NetCashProvidedByUsedInOperatingActivities",
+              "unit": "USD",
+              "accn": "0000310158-26-000063",
+              "form": "10-K",
+              "filed": "2026-02-24"
+            },
+            "note": ""
+          },
+          "capex": {
+            "label": "Additions to property and equipment",
+            "kind": "duration",
+            "unit": "USD",
+            "candidates": [
+              "PaymentsToAcquirePropertyPlantAndEquipment",
+              "PaymentsToAcquireProductiveAssets"
+            ],
+            "tag": "PaymentsToAcquirePropertyPlantAndEquipment",
+            "tag_latest": "2025-12-31",
+            "fy": {
+              "value": 4112000000,
+              "start": "2025-01-01",
+              "end": "2025-12-31",
+              "tag": "PaymentsToAcquirePropertyPlantAndEquipment",
+              "unit": "USD",
+              "accn": "0000310158-26-000063",
+              "form": "10-K",
+              "filed": "2026-02-24"
+            },
+            "prior": {
+              "value": 3372000000,
+              "start": "2024-01-01",
+              "end": "2024-12-31",
+              "tag": "PaymentsToAcquirePropertyPlantAndEquipment",
+              "unit": "USD",
+              "accn": "0000310158-26-000063",
+              "form": "10-K",
+              "filed": "2026-02-24"
+            },
+            "note": ""
+          }
+        }
+      },
+      "operating_margin": {
+        "value": null,
+        "formula": "Operating income / Revenue",
+        "arithmetic": "",
+        "note": "Missing input: operating income."
+      }
+    },
+    "PFE": {
+      "cik": 78003,
+      "company": "PFIZER INC",
+      "facts": {
+        "entity": "PFIZER INC",
+        "fy_end": "2025-12-31",
+        "prior_end": "2024-12-31",
+        "anchor": "revenue",
+        "concepts": {
+          "revenue": {
+            "label": "Total revenue",
+            "kind": "duration",
+            "unit": "USD",
+            "candidates": [
+              "Revenues",
+              "RevenueFromContractWithCustomerExcludingAssessedTax",
+              "RevenueFromContractWithCustomerIncludingAssessedTax",
+              "SalesRevenueNet",
+              "RevenuesNetOfInterestExpense"
+            ],
+            "tag": "Revenues",
+            "tag_latest": "2025-12-31",
+            "fy": {
+              "value": 62579000000,
+              "start": "2025-01-01",
+              "end": "2025-12-31",
+              "tag": "Revenues",
+              "unit": "USD",
+              "accn": "0000078003-26-000026",
+              "form": "10-K",
+              "filed": "2026-02-26"
+            },
+            "prior": {
+              "value": 63627000000,
+              "start": "2024-01-01",
+              "end": "2024-12-31",
+              "tag": "Revenues",
+              "unit": "USD",
+              "accn": "0000078003-26-000026",
+              "form": "10-K",
+              "filed": "2026-02-26"
+            },
+            "note": ""
+          },
+          "operating_income": {
+            "label": "Operating income",
+            "kind": "duration",
+            "unit": "USD",
+            "candidates": [
+              "OperatingIncomeLoss"
+            ],
+            "tag": null,
+            "tag_latest": null,
+            "fy": null,
+            "prior": null,
+            "note": "No annual 10-K data for any candidate tag."
+          },
+          "net_income": {
+            "label": "Net income",
+            "kind": "duration",
+            "unit": "USD",
+            "candidates": [
+              "NetIncomeLoss",
+              "ProfitLoss",
+              "NetIncomeLossAvailableToCommonStockholdersBasic"
+            ],
+            "tag": "NetIncomeLoss",
+            "tag_latest": "2025-12-31",
+            "fy": {
+              "value": 7771000000,
+              "start": "2025-01-01",
+              "end": "2025-12-31",
+              "tag": "NetIncomeLoss",
+              "unit": "USD",
+              "accn": "0000078003-26-000026",
+              "form": "10-K",
+              "filed": "2026-02-26"
+            },
+            "prior": {
+              "value": 8031000000,
+              "start": "2024-01-01",
+              "end": "2024-12-31",
+              "tag": "NetIncomeLoss",
+              "unit": "USD",
+              "accn": "0000078003-26-000026",
+              "form": "10-K",
+              "filed": "2026-02-26"
+            },
+            "note": ""
+          },
+          "eps_diluted": {
+            "label": "Diluted EPS",
+            "kind": "duration",
+            "unit": "USD/shares",
+            "candidates": [
+              "EarningsPerShareDiluted",
+              "EarningsPerShareBasicAndDiluted"
+            ],
+            "tag": "EarningsPerShareDiluted",
+            "tag_latest": "2025-12-31",
+            "fy": {
+              "value": 1.36,
+              "start": "2025-01-01",
+              "end": "2025-12-31",
+              "tag": "EarningsPerShareDiluted",
+              "unit": "USD/shares",
+              "accn": "0000078003-26-000026",
+              "form": "10-K",
+              "filed": "2026-02-26"
+            },
+            "prior": {
+              "value": 1.41,
+              "start": "2024-01-01",
+              "end": "2024-12-31",
+              "tag": "EarningsPerShareDiluted",
+              "unit": "USD/shares",
+              "accn": "0000078003-26-000026",
+              "form": "10-K",
+              "filed": "2026-02-26"
+            },
+            "note": ""
+          },
+          "equity": {
+            "label": "Stockholders' equity",
+            "kind": "instant",
+            "unit": "USD",
+            "candidates": [
+              "StockholdersEquity",
+              "StockholdersEquityIncludingPortionAttributableToNoncontrollingInterest"
+            ],
+            "tag": "StockholdersEquity",
+            "tag_latest": "2025-12-31",
+            "fy": {
+              "value": 86476000000,
+              "start": null,
+              "end": "2025-12-31",
+              "tag": "StockholdersEquity",
+              "unit": "USD",
+              "accn": "0000078003-26-000026",
+              "form": "10-K",
+              "filed": "2026-02-26"
+            },
+            "prior": {
+              "value": 88203000000,
+              "start": null,
+              "end": "2024-12-31",
+              "tag": "StockholdersEquity",
+              "unit": "USD",
+              "accn": "0000078003-26-000026",
+              "form": "10-K",
+              "filed": "2026-02-26"
+            },
+            "note": ""
+          },
+          "lt_debt": {
+            "label": "Long-term debt (noncurrent)",
+            "kind": "instant",
+            "unit": "USD",
+            "candidates": [
+              "LongTermDebtNoncurrent",
+              "LongTermDebtAndCapitalLeaseObligations"
+            ],
+            "tag": "LongTermDebtNoncurrent",
+            "tag_latest": "2025-12-31",
+            "fy": {
+              "value": 61641000000,
+              "start": null,
+              "end": "2025-12-31",
+              "tag": "LongTermDebtNoncurrent",
+              "unit": "USD",
+              "accn": "0000078003-26-000026",
+              "form": "10-K",
+              "filed": "2026-02-26"
+            },
+            "prior": {
+              "value": 57405000000,
+              "start": null,
+              "end": "2024-12-31",
+              "tag": "LongTermDebtNoncurrent",
+              "unit": "USD",
+              "accn": "0000078003-26-000026",
+              "form": "10-K",
+              "filed": "2026-02-26"
+            },
+            "note": ""
+          },
+          "lt_debt_current": {
+            "label": "Current portion of long-term debt",
+            "kind": "instant",
+            "unit": "USD",
+            "candidates": [
+              "LongTermDebtCurrent",
+              "LongTermDebtAndCapitalLeaseObligationsCurrent",
+              "DebtCurrent"
+            ],
+            "tag": "LongTermDebtCurrent",
+            "tag_latest": "2025-12-31",
+            "fy": {
+              "value": 2997000000,
+              "start": null,
+              "end": "2025-12-31",
+              "tag": "LongTermDebtCurrent",
+              "unit": "USD",
+              "accn": "0000078003-26-000026",
+              "form": "10-K",
+              "filed": "2026-02-26"
+            },
+            "prior": {
+              "value": 3747000000,
+              "start": null,
+              "end": "2024-12-31",
+              "tag": "LongTermDebtCurrent",
+              "unit": "USD",
+              "accn": "0000078003-26-000026",
+              "form": "10-K",
+              "filed": "2026-02-26"
+            },
+            "note": ""
+          },
+          "cfo": {
+            "label": "Cash from operations",
+            "kind": "duration",
+            "unit": "USD",
+            "candidates": [
+              "NetCashProvidedByUsedInOperatingActivities",
+              "NetCashProvidedByUsedInOperatingActivitiesContinuingOperations"
+            ],
+            "tag": "NetCashProvidedByUsedInOperatingActivities",
+            "tag_latest": "2025-12-31",
+            "fy": {
+              "value": 11704000000,
+              "start": "2025-01-01",
+              "end": "2025-12-31",
+              "tag": "NetCashProvidedByUsedInOperatingActivities",
+              "unit": "USD",
+              "accn": "0000078003-26-000026",
+              "form": "10-K",
+              "filed": "2026-02-26"
+            },
+            "prior": {
+              "value": 12744000000,
+              "start": "2024-01-01",
+              "end": "2024-12-31",
+              "tag": "NetCashProvidedByUsedInOperatingActivities",
+              "unit": "USD",
+              "accn": "0000078003-26-000026",
+              "form": "10-K",
+              "filed": "2026-02-26"
+            },
+            "note": ""
+          },
+          "capex": {
+            "label": "Additions to property and equipment",
+            "kind": "duration",
+            "unit": "USD",
+            "candidates": [
+              "PaymentsToAcquirePropertyPlantAndEquipment",
+              "PaymentsToAcquireProductiveAssets"
+            ],
+            "tag": "PaymentsToAcquirePropertyPlantAndEquipment",
+            "tag_latest": "2025-12-31",
+            "fy": {
+              "value": 2629000000,
+              "start": "2025-01-01",
+              "end": "2025-12-31",
+              "tag": "PaymentsToAcquirePropertyPlantAndEquipment",
+              "unit": "USD",
+              "accn": "0000078003-26-000026",
+              "form": "10-K",
+              "filed": "2026-02-26"
+            },
+            "prior": {
+              "value": 2909000000,
+              "start": "2024-01-01",
+              "end": "2024-12-31",
+              "tag": "PaymentsToAcquirePropertyPlantAndEquipment",
+              "unit": "USD",
+              "accn": "0000078003-26-000026",
+              "form": "10-K",
+              "filed": "2026-02-26"
+            },
+            "note": ""
+          }
+        }
+      },
+      "operating_margin": {
+        "value": null,
+        "formula": "Operating income / Revenue",
+        "arithmetic": "",
+        "note": "Missing input: operating income."
+      }
+    },
+    "ABBV": {
+      "cik": 1551152,
+      "company": "AbbVie Inc.",
+      "facts": {
+        "entity": "AbbVie Inc.",
+        "fy_end": "2025-12-31",
+        "prior_end": "2024-12-31",
+        "anchor": "revenue",
+        "concepts": {
+          "revenue": {
+            "label": "Total revenue",
+            "kind": "duration",
+            "unit": "USD",
+            "candidates": [
+              "Revenues",
+              "RevenueFromContractWithCustomerExcludingAssessedTax",
+              "RevenueFromContractWithCustomerIncludingAssessedTax",
+              "SalesRevenueNet",
+              "RevenuesNetOfInterestExpense"
+            ],
+            "tag": "Revenues",
+            "tag_latest": "2025-12-31",
+            "fy": {
+              "value": 61160000000,
+              "start": "2025-01-01",
+              "end": "2025-12-31",
+              "tag": "Revenues",
+              "unit": "USD",
+              "accn": "0001551152-26-000008",
+              "form": "10-K",
+              "filed": "2026-02-20"
+            },
+            "prior": {
+              "value": 56334000000,
+              "start": "2024-01-01",
+              "end": "2024-12-31",
+              "tag": "Revenues",
+              "unit": "USD",
+              "accn": "0001551152-26-000008",
+              "form": "10-K",
+              "filed": "2026-02-20"
+            },
+            "note": ""
+          },
+          "operating_income": {
+            "label": "Operating income",
+            "kind": "duration",
+            "unit": "USD",
+            "candidates": [
+              "OperatingIncomeLoss"
+            ],
+            "tag": "OperatingIncomeLoss",
+            "tag_latest": "2025-12-31",
+            "fy": {
+              "value": 15075000000,
+              "start": "2025-01-01",
+              "end": "2025-12-31",
+              "tag": "OperatingIncomeLoss",
+              "unit": "USD",
+              "accn": "0001551152-26-000008",
+              "form": "10-K",
+              "filed": "2026-02-20"
+            },
+            "prior": {
+              "value": 9137000000,
+              "start": "2024-01-01",
+              "end": "2024-12-31",
+              "tag": "OperatingIncomeLoss",
+              "unit": "USD",
+              "accn": "0001551152-26-000008",
+              "form": "10-K",
+              "filed": "2026-02-20"
+            },
+            "note": ""
+          },
+          "net_income": {
+            "label": "Net income",
+            "kind": "duration",
+            "unit": "USD",
+            "candidates": [
+              "NetIncomeLoss",
+              "ProfitLoss",
+              "NetIncomeLossAvailableToCommonStockholdersBasic"
+            ],
+            "tag": "NetIncomeLoss",
+            "tag_latest": "2025-12-31",
+            "fy": {
+              "value": 4226000000,
+              "start": "2025-01-01",
+              "end": "2025-12-31",
+              "tag": "NetIncomeLoss",
+              "unit": "USD",
+              "accn": "0001551152-26-000008",
+              "form": "10-K",
+              "filed": "2026-02-20"
+            },
+            "prior": {
+              "value": 4278000000,
+              "start": "2024-01-01",
+              "end": "2024-12-31",
+              "tag": "NetIncomeLoss",
+              "unit": "USD",
+              "accn": "0001551152-26-000008",
+              "form": "10-K",
+              "filed": "2026-02-20"
+            },
+            "note": ""
+          },
+          "eps_diluted": {
+            "label": "Diluted EPS",
+            "kind": "duration",
+            "unit": "USD/shares",
+            "candidates": [
+              "EarningsPerShareDiluted",
+              "EarningsPerShareBasicAndDiluted"
+            ],
+            "tag": "EarningsPerShareDiluted",
+            "tag_latest": "2025-12-31",
+            "fy": {
+              "value": 2.36,
+              "start": "2025-01-01",
+              "end": "2025-12-31",
+              "tag": "EarningsPerShareDiluted",
+              "unit": "USD/shares",
+              "accn": "0001551152-26-000008",
+              "form": "10-K",
+              "filed": "2026-02-20"
+            },
+            "prior": {
+              "value": 2.39,
+              "start": "2024-01-01",
+              "end": "2024-12-31",
+              "tag": "EarningsPerShareDiluted",
+              "unit": "USD/shares",
+              "accn": "0001551152-26-000008",
+              "form": "10-K",
+              "filed": "2026-02-20"
+            },
+            "note": ""
+          },
+          "equity": {
+            "label": "Stockholders' equity",
+            "kind": "instant",
+            "unit": "USD",
+            "candidates": [
+              "StockholdersEquity",
+              "StockholdersEquityIncludingPortionAttributableToNoncontrollingInterest"
+            ],
+            "tag": "StockholdersEquity",
+            "tag_latest": "2025-12-31",
+            "fy": {
+              "value": -3270000000,
+              "start": null,
+              "end": "2025-12-31",
+              "tag": "StockholdersEquity",
+              "unit": "USD",
+              "accn": "0001551152-26-000008",
+              "form": "10-K",
+              "filed": "2026-02-20"
+            },
+            "prior": {
+              "value": 3325000000,
+              "start": null,
+              "end": "2024-12-31",
+              "tag": "StockholdersEquity",
+              "unit": "USD",
+              "accn": "0001551152-26-000008",
+              "form": "10-K",
+              "filed": "2026-02-20"
+            },
+            "note": ""
+          },
+          "lt_debt": {
+            "label": "Long-term debt (noncurrent)",
+            "kind": "instant",
+            "unit": "USD",
+            "candidates": [
+              "LongTermDebtNoncurrent",
+              "LongTermDebtAndCapitalLeaseObligations"
+            ],
+            "tag": "LongTermDebtAndCapitalLeaseObligations",
+            "tag_latest": "2025-12-31",
+            "fy": {
+              "value": 58941000000,
+              "start": null,
+              "end": "2025-12-31",
+              "tag": "LongTermDebtAndCapitalLeaseObligations",
+              "unit": "USD",
+              "accn": "0001551152-26-000008",
+              "form": "10-K",
+              "filed": "2026-02-20"
+            },
+            "prior": {
+              "value": 60340000000,
+              "start": null,
+              "end": "2024-12-31",
+              "tag": "LongTermDebtAndCapitalLeaseObligations",
+              "unit": "USD",
+              "accn": "0001551152-26-000008",
+              "form": "10-K",
+              "filed": "2026-02-20"
+            },
+            "note": ""
+          },
+          "lt_debt_current": {
+            "label": "Current portion of long-term debt",
+            "kind": "instant",
+            "unit": "USD",
+            "candidates": [
+              "LongTermDebtCurrent",
+              "LongTermDebtAndCapitalLeaseObligationsCurrent",
+              "DebtCurrent"
+            ],
+            "tag": "LongTermDebtAndCapitalLeaseObligationsCurrent",
+            "tag_latest": "2025-12-31",
+            "fy": {
+              "value": 6056000000,
+              "start": null,
+              "end": "2025-12-31",
+              "tag": "LongTermDebtAndCapitalLeaseObligationsCurrent",
+              "unit": "USD",
+              "accn": "0001551152-26-000008",
+              "form": "10-K",
+              "filed": "2026-02-20"
+            },
+            "prior": {
+              "value": 6804000000,
+              "start": null,
+              "end": "2024-12-31",
+              "tag": "LongTermDebtAndCapitalLeaseObligationsCurrent",
+              "unit": "USD",
+              "accn": "0001551152-26-000008",
+              "form": "10-K",
+              "filed": "2026-02-20"
+            },
+            "note": ""
+          },
+          "cfo": {
+            "label": "Cash from operations",
+            "kind": "duration",
+            "unit": "USD",
+            "candidates": [
+              "NetCashProvidedByUsedInOperatingActivities",
+              "NetCashProvidedByUsedInOperatingActivitiesContinuingOperations"
+            ],
+            "tag": "NetCashProvidedByUsedInOperatingActivities",
+            "tag_latest": "2025-12-31",
+            "fy": {
+              "value": 19030000000,
+              "start": "2025-01-01",
+              "end": "2025-12-31",
+              "tag": "NetCashProvidedByUsedInOperatingActivities",
+              "unit": "USD",
+              "accn": "0001551152-26-000008",
+              "form": "10-K",
+              "filed": "2026-02-20"
+            },
+            "prior": {
+              "value": 18806000000,
+              "start": "2024-01-01",
+              "end": "2024-12-31",
+              "tag": "NetCashProvidedByUsedInOperatingActivities",
+              "unit": "USD",
+              "accn": "0001551152-26-000008",
+              "form": "10-K",
+              "filed": "2026-02-20"
+            },
+            "note": ""
+          },
+          "capex": {
+            "label": "Additions to property and equipment",
+            "kind": "duration",
+            "unit": "USD",
+            "candidates": [
+              "PaymentsToAcquirePropertyPlantAndEquipment",
+              "PaymentsToAcquireProductiveAssets"
+            ],
+            "tag": "PaymentsToAcquirePropertyPlantAndEquipment",
+            "tag_latest": "2025-12-31",
+            "fy": {
+              "value": 1214000000,
+              "start": "2025-01-01",
+              "end": "2025-12-31",
+              "tag": "PaymentsToAcquirePropertyPlantAndEquipment",
+              "unit": "USD",
+              "accn": "0001551152-26-000008",
+              "form": "10-K",
+              "filed": "2026-02-20"
+            },
+            "prior": {
+              "value": 974000000,
+              "start": "2024-01-01",
+              "end": "2024-12-31",
+              "tag": "PaymentsToAcquirePropertyPlantAndEquipment",
+              "unit": "USD",
+              "accn": "0001551152-26-000008",
+              "form": "10-K",
+              "filed": "2026-02-20"
+            },
+            "note": ""
+          }
+        }
+      },
+      "operating_margin": {
+        "value": 0.24648463047743624,
+        "formula": "Operating income / Revenue",
+        "arithmetic": "15,075.0 / 61,160.0 = 24.65%",
+        "note": ""
+      }
+    }
+  }
+}

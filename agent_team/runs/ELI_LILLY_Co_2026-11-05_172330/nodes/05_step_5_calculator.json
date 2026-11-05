@@ -1,0 +1,53 @@
+{
+  "node": "Step 5 Calculator",
+  "input": {
+    "ticker": "LLY",
+    "peers": [
+      "MRK",
+      "PFE",
+      "ABBV"
+    ],
+    "price": 1367.71,
+    "uses_steps": [
+      4
+    ]
+  },
+  "output": {
+    "revenue_growth": {
+      "value": 0.4470394955930999,
+      "formula": "(Revenue FY - Revenue prior FY) / Revenue prior FY",
+      "arithmetic": "(65,179.0 - 45,043.0) / 45,043.0 = 44.70%",
+      "note": ""
+    },
+    "operating_margin": {
+      "value": null,
+      "formula": "Operating income / Revenue",
+      "arithmetic": "",
+      "note": "Missing input: operating income."
+    },
+    "roae": {
+      "value": 1.01159114857745,
+      "formula": "Net income / ((Equity FY + Equity prior FY) / 2)",
+      "arithmetic": "20,640.0 / ((26,535.0 + 14,272.0) / 2) = 101.16%",
+      "note": ""
+    },
+    "debt_to_equity": {
+      "value": 1.6017712455247786,
+      "formula": "(Long-term debt noncurrent + Current portion of LTD) / Equity FY",
+      "arithmetic": "(40,868.0 + 1,635.0) / 26,535.0 = 1.60x",
+      "note": ""
+    },
+    "fcf": {
+      "value": null,
+      "formula": "Cash from operations - Capital expenditures",
+      "arithmetic": "",
+      "note": "Missing input: capex."
+    },
+    "pe": {
+      "value": 59.59520697167756,
+      "formula": "Share price / Diluted EPS",
+      "arithmetic": "1,367.71 / 22.95 = 59.60x",
+      "note": ""
+    }
+  }
+}

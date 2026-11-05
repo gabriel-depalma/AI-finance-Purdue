@@ -1,0 +1,53 @@
+{
+  "node": "Step 5 Calculator",
+  "input": {
+    "ticker": "COST",
+    "peers": [
+      "WMT",
+      "TGT",
+      "BJ"
+    ],
+    "price": 992.13,
+    "uses_steps": [
+      4
+    ]
+  },
+  "output": {
+    "revenue_growth": {
+      "value": 0.10143695387577888,
+      "formula": "(Revenue FY - Revenue prior FY) / Revenue prior FY",
+      "arithmetic": "(303,154.0 - 275,235.0) / 275,235.0 = 10.14%",
+      "note": ""
+    },
+    "operating_margin": {
+      "value": 0.03854476602650798,
+      "formula": "Operating income / Revenue",
+      "arithmetic": "11,685.0 / 303,154.0 = 3.85%",
+      "note": ""
+    },
+    "roae": {
+      "value": 0.284021118413964,
+      "formula": "Net income / ((Equity FY + Equity prior FY) / 2)",
+      "arithmetic": "9,226.0 / ((35,803.0 + 29,164.0) / 2) = 28.40%",
+      "note": ""
+    },
+    "debt_to_equity": {
+      "value": 0.17210848252939698,
+      "formula": "(Long-term debt noncurrent + Current portion of LTD) / Equity FY",
+      "arithmetic": "(3,914.0 + 2,248.0) / 35,803.0 = 0.17x",
+      "note": ""
+    },
+    "fcf": {
+      "value": 9382000000,
+      "formula": "Cash from operations - Capital expenditures",
+      "arithmetic": "15,817.0 - 6,435.0 = 9,382.0",
+      "note": ""
+    },
+    "pe": {
+      "value": 47.79046242774566,
+      "formula": "Share price / Diluted EPS",
+      "arithmetic": "992.13 / 20.76 = 47.79x",
+      "note": ""
+    }
+  }
+}

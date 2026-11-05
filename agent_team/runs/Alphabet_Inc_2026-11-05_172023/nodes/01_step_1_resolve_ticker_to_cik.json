@@ -1,0 +1,18 @@
+{
+  "node": "Step 1 Resolve ticker to CIK",
+  "input": {
+    "ticker": "GOOG",
+    "peers": [
+      "AAPL",
+      "MSFT",
+      "META"
+    ],
+    "price": 281.74,
+    "uses_steps": []
+  },
+  "output": {
+    "ticker": "GOOG",
+    "cik": 1652044,
+    "title": "Alphabet Inc."
+  }
+}

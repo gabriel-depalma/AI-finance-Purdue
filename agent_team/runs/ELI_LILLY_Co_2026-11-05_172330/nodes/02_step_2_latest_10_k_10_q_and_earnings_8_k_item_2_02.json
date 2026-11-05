@@ -1,0 +1,51 @@
+{
+  "node": "Step 2 Latest 10-K, 10-Q and earnings 8-K (Item 2.02)",
+  "input": {
+    "ticker": "LLY",
+    "peers": [
+      "MRK",
+      "PFE",
+      "ABBV"
+    ],
+    "price": 1367.71,
+    "uses_steps": [
+      1
+    ]
+  },
+  "output": {
+    "10-K": {
+      "accession": "0000059478-26-000013",
+      "filing_date": "2026-02-12",
+      "report_date": "2025-12-31",
+      "accepted": "2026-02-12 13:58:32",
+      "index_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947826000013/0000059478-26-000013-index.htm",
+      "doc_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947826000013/lly-20251231.htm",
+      "items": ""
+    },
+    "10-Q": {
+      "accession": "0000059478-26-000108",
+      "filing_date": "2026-10-29",
+      "report_date": "2026-09-30",
+      "accepted": "2026-10-29 11:35:46",
+      "index_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947826000108/0000059478-26-000108-index.htm",
+      "doc_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947826000108/lly-20260930.htm",
+      "items": ""
+    },
+    "8-K": {
+      "accession": "0000059478-26-000104",
+      "filing_date": "2026-10-29",
+      "report_date": "2026-10-29",
+      "accepted": "2026-10-29 07:03:30",
+      "index_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947826000104/0000059478-26-000104-index.htm",
+      "doc_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947826000104/lly-20261029.htm",
+      "items": "2.02,9.01",
+      "exhibit": {
+        "seq": "2",
+        "description": "EX-99.1",
+        "name": "q326lillysalesandearningsp.htm",
+        "type": "EX-99.1",
+        "url": "https://www.sec.gov/Archives/edgar/data/59478/000005947826000104/q326lillysalesandearningsp.htm"
+      }
+    }
+  }
+}

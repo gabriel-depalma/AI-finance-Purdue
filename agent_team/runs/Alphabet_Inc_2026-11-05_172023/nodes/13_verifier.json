@@ -1,0 +1,424 @@
+{
+  "node": "Verifier",
+  "input": {
+    "report": "report.md",
+    "filing_texts": [
+      "10-K.txt",
+      "10-Q.txt",
+      "8-K_EX-99.1_release.txt"
+    ],
+    "facts": "facts.json",
+    "model_packet": {
+      "task": "For each item, decide whether the cited filing line states the number for the period and in the definition the report sentence claims; if not, give the right number.",
+      "context": {
+        "items": [
+          {
+            "id": 4,
+            "number_as_written": "25%",
+            "report_sentence": "Consolidated Alphabet revenues increased 25% to $127.6 billion, reflecting strong performance across the business and our 13th consecutive quarter of double-digit revenue growth [Release L14: \"Consolidated Alphabet revenues increased 25% to $127.6 billion, reflecting strong performance across the business and our 13th consecutive quarter of double-digit revenue growth.\"]",
+            "cited_document": "Release",
+            "cited_line": "L14: •Consolidated Alphabet revenues increased 25% to $127.6 billion, reflecting strong performance across the business and our 13th consecutive quarter of double-digit revenue growth.",
+            "table_column_header": "",
+            "lines_before": [
+              "L10: Alphabet Announces Third Quarter 2026 Results",
+              "L12: MOUNTAIN VIEW, Calif. – October 28, 2026 – Alphabet Inc. (NASDAQ: GOOG, GOOGL) today announced financial results for the quarter ended September 30, 2026."
+            ]
+          },
+          {
+            "id": 5,
+            "number_as_written": "$127.6 billion",
+            "report_sentence": "Consolidated Alphabet revenues increased 25% to $127.6 billion, reflecting strong performance across the business and our 13th consecutive quarter of double-digit revenue growth [Release L14: \"Consolidated Alphabet revenues increased 25% to $127.6 billion, reflecting strong performance across the business and our 13th consecutive quarter of double-digit revenue growth.\"]",
+            "cited_document": "Release",
+            "cited_line": "L14: •Consolidated Alphabet revenues increased 25% to $127.6 billion, reflecting strong performance across the business and our 13th consecutive quarter of double-digit revenue growth.",
+            "table_column_header": "",
+            "lines_before": [
+              "L10: Alphabet Announces Third Quarter 2026 Results",
+              "L12: MOUNTAIN VIEW, Calif. – October 28, 2026 – Alphabet Inc. (NASDAQ: GOOG, GOOGL) today announced financial results for the quarter ended September 30, 2026."
+            ]
+          },
+          {
+            "id": 8,
+            "number_as_written": "$127,577M",
+            "report_sentence": "- **Quarterly total revenue (Q3 2026)**: $127,577M [Release L90: \"Total revenues | $102,346 | $127,577\"]",
+            "cited_document": "Release",
+            "cited_line": "L90: Total revenues | $102,346 | $127,577",
+            "table_column_header": "L10: Alphabet Announces Third Quarter 2026 Results\nL12: MOUNTAIN VIEW, Calif. – October 28, 2026 – Alphabet Inc. (NASDAQ: GOOG, GOOGL) today announced financial results for the quarter ended September 30, 2026.",
+            "lines_before": [
+              "L86: Other Bets | 344 | 372",
+              "L88: Hedging gains (losses) | (207) | 194"
+            ]
+          },
+          {
+            "id": 10,
+            "number_as_written": "$2.12",
+            "report_sentence": "- **Quarter diluted EPS (Q3 2026)**: $2.12 [Release L60: \"Diluted net income per common share | $2.87 | $2.12\"]",
+            "cited_document": "Release",
+            "cited_line": "L60: Diluted net income per common share | $2.87 | $2.12",
+            "table_column_header": "L10: Alphabet Announces Third Quarter 2026 Results\nL12: MOUNTAIN VIEW, Calif. – October 28, 2026 – Alphabet Inc. (NASDAQ: GOOG, GOOGL) today announced financial results for the quarter ended September 30, 2026.",
+            "lines_before": [
+              "L56: Other income (expense), net | $12,759 | $(8,221)",
+              "L58: Net income available to common stockholders | $34,979 | $26,170"
+            ]
+          },
+          {
+            "id": 25,
+            "number_as_written": "103%",
+            "report_sentence": "Google Cloud delivered record growth as revenues increased 103% to $30.7 billion, driven by enterprise AI infrastructure, AI solutions and strong TPU systems sales [Release L18: \"Google Cloud delivered record growth as revenues increased 103% to $30.7 billion, led by strong growth in Google Cloud Platform (GCP) across enterprise AI infrastructure and enterprise AI solutions, as well as core GCP services. TPU systems sales were also a meaningful contributor to revenue growth.\"]",
+            "cited_document": "Release",
+            "cited_line": "L18: •Google Cloud delivered record growth as revenues increased 103% to $30.7 billion, led by strong growth in Google Cloud Platform (GCP) across enterprise AI infrastructure and enterprise AI solutions, as well as core GCP services. TPU systems sales were also a meaningful contributor to revenue growth.",
+            "table_column_header": "",
+            "lines_before": [
+              "L14: •Consolidated Alphabet revenues increased 25% to $127.6 billion, reflecting strong performance across the business and our 13th consecutive quarter of double-digit revenue growth.",
+              "L16: •Google Services revenues increased 11% to $96.3 billion, led by 12% growth in Google Search & other with the year-over-year Search query growth rate the highest it has been in the last five years."
+            ]
+          },
+          {
+            "id": 26,
+            "number_as_written": "$30.7 billion",
+            "report_sentence": "Google Cloud delivered record growth as revenues increased 103% to $30.7 billion, driven by enterprise AI infrastructure, AI solutions and strong TPU systems sales [Release L18: \"Google Cloud delivered record growth as revenues increased 103% to $30.7 billion, led by strong growth in Google Cloud Platform (GCP) across enterprise AI infrastructure and enterprise AI solutions, as well as core GCP services. TPU systems sales were also a meaningful contributor to revenue growth.\"]",
+            "cited_document": "Release",
+            "cited_line": "L18: •Google Cloud delivered record growth as revenues increased 103% to $30.7 billion, led by strong growth in Google Cloud Platform (GCP) across enterprise AI infrastructure and enterprise AI solutions, as well as core GCP services. TPU systems sales were also a meaningful contributor to revenue growth.",
+            "table_column_header": "",
+            "lines_before": [
+              "L14: •Consolidated Alphabet revenues increased 25% to $127.6 billion, reflecting strong performance across the business and our 13th consecutive quarter of double-digit revenue growth.",
+              "L16: •Google Services revenues increased 11% to $96.3 billion, led by 12% growth in Google Search & other with the year-over-year Search query growth rate the highest it has been in the last five years."
+            ]
+          },
+          {
+            "id": 27,
+            "number_as_written": "32 billion",
+            "report_sentence": "Gemini 4 Argon and Carbon are now leading at the frontier, with first-party model APIs processing nearly 32 billion tokens per minute-more than four times the volume a year ago [Release L30: \"Gemini 4 Argon and Carbon are now leading at the frontier. Overall, our first-party model APIs are now processing nearly 32 billion tokens per minute, more than four times what we processed a year ago.\"]",
+            "cited_document": "Release",
+            "cited_line": "L32: Gemini 4 Argon and Carbon are now leading at the frontier. Overall, our first-party model APIs are now processing nearly 32 billion tokens per minute, more than four times what we processed a year ago.",
+            "table_column_header": "",
+            "lines_before": [
+              "L28: Our AI investments are driving overall Search query growth, including commercial queries. In fact, our year-over-year query growth rate is the highest it’s been in the last five years.",
+              "L30: Google Cloud revenues grew 103%, powered by huge demand for our AI infrastructure and AI solutions. We’re also seeing strong demand for our TPU systems across a wide range of customers."
+            ]
+          }
+        ]
+      },
+      "expected_output": "JSON with 'items': one entry per item with 'id', 'verdict' ('states_it' or 'does_not'), 'reason', 'corrected_value' (empty if states_it) and 'corrected_line' (0 if none)."
+    }
+  },
+  "output": {
+    "counts": {
+      "correct": 28,
+      "wrong": 0,
+      "unsupported": 3
+    },
+    "verified_report": "verified_report.md",
+    "items": [
+      {
+        "id": 1,
+        "part": "",
+        "cite": "[price given with --price]",
+        "code": "equals the price given (281.74)",
+        "model": "",
+        "mark": "correct",
+        "correction": "",
+        "number": "$281.74"
+      },
+      {
+        "id": 2,
+        "part": "Overview",
+        "cite": "[10-K L1124: \"We entered into definitive agreements to acquire Wiz, a leading cloud security platform, for $32.0 billion, subject to closing adjustments, in an all-cash transaction\"]",
+        "code": "quoted words are not in the filing",
+        "model": "",
+        "mark": "unsupported",
+        "correction": "$32.0 billion [10-K L1124: \"•In 2025, we entered into definitive agreements to acquire Wiz, a leading cloud security platform, for $32.0 billion, and Intersect, a provider of data center a\"]",
+        "number": "$32.0 billion"
+      },
+      {
+        "id": 3,
+        "part": "Overview",
+        "cite": "[10-K L1124: \"We entered into definitive agreements to acquire Wiz, a leading cloud security platform, for $32.0 billion, subject to closing adjustments, in an all-cash transaction\"]",
+        "code": "quoted words are not in the filing",
+        "model": "",
+        "mark": "unsupported",
+        "correction": "$4.8 billion [10-K L1124: \"•In 2025, we entered into definitive agreements to acquire Wiz, a leading cloud security platform, for $32.0 billion, and Intersect, a provider of data center a\"]",
+        "number": "$4.8 billion"
+      },
+      {
+        "id": 4,
+        "part": "Market Positioning and Growth Outlook",
+        "cite": "[Release L14: \"Consolidated Alphabet revenues increased 25% to $127.6 billion, reflecting strong performance across the business and our 13th consecutive quarter of double-digit revenue growth.\"]",
+        "code": "line found in the filing; number is on the line",
+        "model": "states_it: The cited line directly states a 25% increase in consolidated Alphabet revenues for the quarter, matching the report claim.",
+        "mark": "correct",
+        "correction": "",
+        "number": "25%"
+      },
+      {
+        "id": 5,
+        "part": "Market Positioning and Growth Outlook",
+        "cite": "[Release L14: \"Consolidated Alphabet revenues increased 25% to $127.6 billion, reflecting strong performance across the business and our 13th consecutive quarter of double-digit revenue growth.\"]",
+        "code": "line found in the filing; number is on the line",
+        "model": "states_it: The cited line directly states the revenue amount of $127.6 billion for the quarter, matching the report claim.",
+        "mark": "correct",
+        "correction": "",
+        "number": "$127.6 billion"
+      },
+      {
+        "id": 6,
+        "part": "Market Positioning and Growth Outlook",
+        "cite": "[XBRL GOOG us-gaap:Revenues 2025-12-31]",
+        "code": "equals the facts file",
+        "model": "",
+        "mark": "correct",
+        "correction": "",
+        "number": "$402,836.0M"
+      },
+      {
+        "id": 7,
+        "part": "Market Positioning and Growth Outlook",
+        "cite": "[ratio revenue_growth: (402,836.0 - 350,018.0) / 350,018.0]",
+        "code": "recomputed: (402,836.0 - 350,018.0) / 350,018.0 = 15.09%",
+        "model": "",
+        "mark": "correct",
+        "correction": "",
+        "number": "15.09%"
+      },
+      {
+        "id": 8,
+        "part": "Market Positioning and Growth Outlook",
+        "cite": "[Release L90: \"Total revenues | $102,346 | $127,577\"]",
+        "code": "line found in the filing; number is on the line",
+        "model": "states_it: The table row lists $127,577 as the second column, which represents Q3 2026 total revenue, matching the report claim.",
+        "mark": "correct",
+        "correction": "",
+        "number": "$127,577M"
+      },
+      {
+        "id": 9,
+        "part": "Market Positioning and Growth Outlook",
+        "cite": "[ratio quarter_revenue_growth: (127,577 - 102,346) / 102,346]",
+        "code": "recomputed: (127,577 - 102,346) / 102,346 = 24.65%",
+        "model": "",
+        "mark": "correct",
+        "correction": "",
+        "number": "24.65%"
+      },
+      {
+        "id": 10,
+        "part": "Market Positioning and Growth Outlook",
+        "cite": "[Release L60: \"Diluted net income per common share | $2.87 | $2.12\"]",
+        "code": "line found in the filing; number is on the line",
+        "model": "states_it: The table row lists $2.12 as the second column, which represents Q3 2026 diluted EPS, matching the report claim.",
+        "mark": "correct",
+        "correction": "",
+        "number": "$2.12"
+      },
+      {
+        "id": 11,
+        "part": "Market Positioning and Growth Outlook",
+        "cite": "[ratio revenue_growth: (478,834.0 - 416,161.0) / 416,161.0]",
+        "code": "recomputed: (478,834.0 - 416,161.0) / 416,161.0 = 15.06%",
+        "model": "",
+        "mark": "correct",
+        "correction": "",
+        "number": "15.06%"
+      },
+      {
+        "id": 12,
+        "part": "Market Positioning and Growth Outlook",
+        "cite": "[ratio revenue_growth: (331,839.0 - 281,724.0) / 281,724.0]",
+        "code": "recomputed: (331,839.0 - 281,724.0) / 281,724.0 = 17.79%",
+        "model": "",
+        "mark": "correct",
+        "correction": "",
+        "number": "17.79%"
+      },
+      {
+        "id": 13,
+        "part": "Market Positioning and Growth Outlook",
+        "cite": "[ratio revenue_growth: (200,966.0 - 164,501.0) / 164,501.0]",
+        "code": "recomputed: (200,966.0 - 164,501.0) / 164,501.0 = 22.17%",
+        "model": "",
+        "mark": "correct",
+        "correction": "",
+        "number": "22.17%"
+      },
+      {
+        "id": 14,
+        "part": "Valuation Insights",
+        "cite": "[XBRL GOOG us-gaap:OperatingIncomeLoss 2025-12-31]",
+        "code": "equals the facts file",
+        "model": "",
+        "mark": "correct",
+        "correction": "",
+        "number": "$129,039.0M"
+      },
+      {
+        "id": 15,
+        "part": "Valuation Insights",
+        "cite": "[ratio operating_margin: 129,039.0 / 402,836.0]",
+        "code": "recomputed: 129,039.0 / 402,836.0 = 32.03%",
+        "model": "",
+        "mark": "correct",
+        "correction": "",
+        "number": "32.03%"
+      },
+      {
+        "id": 16,
+        "part": "Valuation Insights",
+        "cite": "[XBRL GOOG us-gaap:NetIncomeLoss 2025-12-31]",
+        "code": "equals the facts file",
+        "model": "",
+        "mark": "correct",
+        "correction": "",
+        "number": "$132,170.0M"
+      },
+      {
+        "id": 17,
+        "part": "Valuation Insights",
+        "cite": "[ratio net_margin: 132,170.0 / 402,836.0]",
+        "code": "recomputed: 132,170.0 / 402,836.0 = 32.81%",
+        "model": "",
+        "mark": "correct",
+        "correction": "",
+        "number": "32.81%"
+      },
+      {
+        "id": 18,
+        "part": "Valuation Insights",
+        "cite": "[XBRL GOOG us-gaap:EarningsPerShareDiluted 2025-12-31]",
+        "code": "equals the facts file",
+        "model": "",
+        "mark": "correct",
+        "correction": "",
+        "number": "$10.81"
+      },
+      {
+        "id": 19,
+        "part": "Valuation Insights",
+        "cite": "[ratio roae: 132,170.0 / ((415,265.0 + 325,084.0) / 2)]",
+        "code": "recomputed: 132,170.0 / ((415,265.0 + 325,084.0) / 2) = 35.70%",
+        "model": "",
+        "mark": "correct",
+        "correction": "",
+        "number": "35.70%"
+      },
+      {
+        "id": 20,
+        "part": "Valuation Insights",
+        "cite": "[ratio debt_to_equity: (46,547.0 + 1,996.0) / 415,265.0]",
+        "code": "recomputed: (46,547.0 + 1,996.0) / 415,265.0 = 0.12x",
+        "model": "",
+        "mark": "correct",
+        "correction": "",
+        "number": "0.12x"
+      },
+      {
+        "id": 21,
+        "part": "Valuation Insights",
+        "cite": "[ratio free_cash_flow: 164,713.0 - 91,447.0]",
+        "code": "recomputed: 164,713.0 - 91,447.0 = $73,266.0M",
+        "model": "",
+        "mark": "correct",
+        "correction": "",
+        "number": "$73,266.0M"
+      },
+      {
+        "id": 22,
+        "part": "Valuation Insights",
+        "cite": "[ratio fcf_margin: (164,713.0 - 91,447.0) / 402,836.0]",
+        "code": "recomputed: (164,713.0 - 91,447.0) / 402,836.0 = 18.19%",
+        "model": "",
+        "mark": "correct",
+        "correction": "",
+        "number": "18.19%"
+      },
+      {
+        "id": 23,
+        "part": "Valuation Insights",
+        "cite": "[ratio pe: 281.74 / 10.81]",
+        "code": "recomputed: 281.74 / 10.81 = 26.06x",
+        "model": "",
+        "mark": "correct",
+        "correction": "",
+        "number": "26.06x"
+      },
+      {
+        "id": 24,
+        "part": "Valuation Insights",
+        "cite": "[ratio fcf_margin: (164,713.0 - 91,447.0) / 402,836.0]",
+        "code": "recomputed: (164,713.0 - 91,447.0) / 402,836.0 = 18.19%",
+        "model": "",
+        "mark": "correct",
+        "correction": "",
+        "number": "18.19%"
+      },
+      {
+        "id": 25,
+        "part": "Future Developments and Strategic Recommendations",
+        "cite": "[Release L18: \"Google Cloud delivered record growth as revenues increased 103% to $30.7 billion, led by strong growth in Google Cloud Platform (GCP) across enterprise AI infrastructure and enterprise AI solutions, as well as core GCP services. TPU systems sales were also a meaningful contributor to revenue growth.\"]",
+        "code": "line found in the filing; number is on the line",
+        "model": "states_it: The cited bullet explicitly says Google Cloud revenues increased 103% to $30.7 billion, matching the report claim.",
+        "mark": "correct",
+        "correction": "",
+        "number": "103%"
+      },
+      {
+        "id": 26,
+        "part": "Future Developments and Strategic Recommendations",
+        "cite": "[Release L18: \"Google Cloud delivered record growth as revenues increased 103% to $30.7 billion, led by strong growth in Google Cloud Platform (GCP) across enterprise AI infrastructure and enterprise AI solutions, as well as core GCP services. TPU systems sales were also a meaningful contributor to revenue growth.\"]",
+        "code": "line found in the filing; number is on the line",
+        "model": "states_it: The cited bullet directly provides the $30.7 billion figure for Google Cloud revenues, matching the report claim.",
+        "mark": "correct",
+        "correction": "",
+        "number": "$30.7 billion"
+      },
+      {
+        "id": 27,
+        "part": "Future Developments and Strategic Recommendations",
+        "cite": "[Release L30: \"Gemini 4 Argon and Carbon are now leading at the frontier. Overall, our first-party model APIs are now processing nearly 32 billion tokens per minute, more than four times what we processed a year ago.\"]",
+        "code": "quote found on L32, not the cited line; line found in the filing; number is on the line",
+        "model": "states_it: The cited line states that first‑party model APIs are processing nearly 32 billion tokens per minute, matching the report claim.",
+        "mark": "correct",
+        "correction": "",
+        "number": "32 billion"
+      },
+      {
+        "id": 28,
+        "part": "Future Developments and Strategic Recommendations",
+        "cite": "",
+        "code": "no source",
+        "model": "",
+        "mark": "unsupported",
+        "correction": "[ratio debt_to_equity: (46,547.0 + 1,996.0) / 415,265.0]",
+        "number": "0.12x"
+      },
+      {
+        "id": 29,
+        "part": "Investment Recommendation",
+        "cite": "[ratio operating_margin: 129,039.0 / 402,836.0]",
+        "code": "recomputed: 129,039.0 / 402,836.0 = 32.03%",
+        "model": "",
+        "mark": "correct",
+        "correction": "",
+        "number": "32.03%"
+      },
+      {
+        "id": 30,
+        "part": "Investment Recommendation",
+        "cite": "[ratio operating_margin: 129,039.0 / 402,836.0]",
+        "code": "recomputed: 129,039.0 / 402,836.0 = 32.03%",
+        "model": "",
+        "mark": "correct",
+        "correction": "",
+        "number": "32.03%"
+      },
+      {
+        "id": 31,
+        "part": "Investment Recommendation",
+        "cite": "[ratio fcf_margin: (164,713.0 - 91,447.0) / 402,836.0]",
+        "code": "recomputed: (164,713.0 - 91,447.0) / 402,836.0 = 18.19%",
+        "model": "",
+        "mark": "correct",
+        "correction": "",
+        "number": "18.19%"
+      }
+    ]
+  }
+}

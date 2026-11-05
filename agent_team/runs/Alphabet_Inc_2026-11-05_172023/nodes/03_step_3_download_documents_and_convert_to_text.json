@@ -1,0 +1,20 @@
+{
+  "node": "Step 3 Download documents and convert to text",
+  "input": {
+    "ticker": "GOOG",
+    "peers": [
+      "AAPL",
+      "MSFT",
+      "META"
+    ],
+    "price": 281.74,
+    "uses_steps": [
+      2
+    ]
+  },
+  "output": {
+    "10-K": "C:\\Users\\gabed\\OneDrive\\Documents\\Ai in Finance\\agent_team\\runs\\Alphabet_Inc_2026-11-05_172023\\10-K.txt",
+    "10-Q": "C:\\Users\\gabed\\OneDrive\\Documents\\Ai in Finance\\agent_team\\runs\\Alphabet_Inc_2026-11-05_172023\\10-Q.txt",
+    "8-K": "C:\\Users\\gabed\\OneDrive\\Documents\\Ai in Finance\\agent_team\\runs\\Alphabet_Inc_2026-11-05_172023\\8-K_EX-99.1_release.txt"
+  }
+}

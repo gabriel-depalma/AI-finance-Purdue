@@ -1,0 +1,400 @@
+{
+  "node": "Verifier",
+  "input": {
+    "report": "report.md",
+    "filing_texts": [
+      "10-K.txt",
+      "10-Q.txt",
+      "8-K_EX-99.1_release.txt"
+    ],
+    "facts": "facts.json",
+    "model_packet": {
+      "task": "For each item, decide whether the cited filing line states the number for the period and in the definition the report sentence claims; if not, give the right number.",
+      "context": {
+        "items": [
+          {
+            "id": 2,
+            "number_as_written": "1.7",
+            "report_sentence": "Margins improved as **gross-margin percent rose 1.7 percentage points, driven by favorable product mix and lower production costs** [10-K L1366: \"Gross margin as a percent of revenue in 2025 increased 1.7 percentage points compared with 2024, primarily driven by favorable product mix and improved cost of production, partially offset by lower realized prices.\"]",
+            "cited_document": "10-K",
+            "cited_line": "L1366: Gross margin as a percent of revenue in 2025 increased 1.7 percentage points compared with 2024, primarily driven by favorable product mix and improved cost of production, partially offset by lower realized prices.",
+            "table_column_header": "",
+            "lines_before": [
+              "L1362: Income taxes | 5,091 | 2,090 | 144",
+              "L1364: Effective tax rate | 19.8% | 16.5%"
+            ]
+          },
+          {
+            "id": 3,
+            "number_as_written": "21 %",
+            "report_sentence": "Cost structure shifted with **R&D expenses up 21 %**, reflecting continued investment in the pipeline [10-K L1368: \"Research and development expenses increased 21 percent in 2025, primarily driven by continued investments in our early and late-stage portfolio.\"] and **marketing, selling and administrative costs up 29 %**, supporting new and planned launches [10-K L1370: \"Marketing, selling, and administrative expenses increased 29 percent in 2025, primarily driven by promotional efforts supporting ongoing and planned launches.\"]",
+            "cited_document": "10-K",
+            "cited_line": "L1368: Research and development expenses increased 21 percent in 2025, primarily driven by continued investments in our early and late-stage portfolio.",
+            "table_column_header": "",
+            "lines_before": [
+              "L1364: Effective tax rate | 19.8% | 16.5%",
+              "L1366: Gross margin as a percent of revenue in 2025 increased 1.7 percentage points compared with 2024, primarily driven by favorable product mix and improved cost of production, partially offset by lower realized prices."
+            ]
+          },
+          {
+            "id": 4,
+            "number_as_written": "29 %",
+            "report_sentence": "Cost structure shifted with **R&D expenses up 21 %**, reflecting continued investment in the pipeline [10-K L1368: \"Research and development expenses increased 21 percent in 2025, primarily driven by continued investments in our early and late-stage portfolio.\"] and **marketing, selling and administrative costs up 29 %**, supporting new and planned launches [10-K L1370: \"Marketing, selling, and administrative expenses increased 29 percent in 2025, primarily driven by promotional efforts supporting ongoing and planned launches.\"]",
+            "cited_document": "10-K",
+            "cited_line": "L1370: Marketing, selling, and administrative expenses increased 29 percent in 2025, primarily driven by promotional efforts supporting ongoing and planned launches.",
+            "table_column_header": "",
+            "lines_before": [
+              "L1366: Gross margin as a percent of revenue in 2025 increased 1.7 percentage points compared with 2024, primarily driven by favorable product mix and improved cost of production, partially offset by lower realized prices.",
+              "L1368: Research and development expenses increased 21 percent in 2025, primarily driven by continued investments in our early and late-stage portfolio."
+            ]
+          },
+          {
+            "id": 7,
+            "number_as_written": "$24,397M",
+            "report_sentence": "- **Quarter Revenue (Q3 2026)**: $24,397M [Release L146: \"Total Revenue | 24,397 | 17,601\"]",
+            "cited_document": "Release",
+            "cited_line": "L146: Total Revenue | 24,397 | 17,601 | 39% | 67,170 | 45,887 | 46%",
+            "table_column_header": "",
+            "lines_before": [
+              "L142: Foundayo | 184 | — | NM | 281 | — | NM",
+              "L144: Inluriyo | 73 | — | NM | 183 | — | NM"
+            ]
+          },
+          {
+            "id": 9,
+            "number_as_written": "$7.22",
+            "report_sentence": "- **Quarter diluted EPS (Q3 2026)**: $7.22 [Release L376: \"Earnings per share (diluted) - Reported | $7.22\"]",
+            "cited_document": "Release",
+            "cited_line": "L376: Earnings per share (diluted) - Reported | $7.22 | $6.21 | $23.42 | $15.56",
+            "table_column_header": "",
+            "lines_before": [
+              "L372: Effective tax rate - Reported | 23.3% | 22.8% | 21.0% | 19.8%",
+              "L374: Effective tax rate - Non-GAAP(4) | 24.0% | 17.7% | 20.9% | 17.8%"
+            ]
+          }
+        ]
+      },
+      "expected_output": "JSON with 'items': one entry per item with 'id', 'verdict' ('states_it' or 'does_not'), 'reason', 'corrected_value' (empty if states_it) and 'corrected_line' (0 if none)."
+    }
+  },
+  "output": {
+    "counts": {
+      "correct": 22,
+      "wrong": 0,
+      "unsupported": 9
+    },
+    "verified_report": "verified_report.md",
+    "items": [
+      {
+        "id": 1,
+        "part": "",
+        "cite": "[price given with --price]",
+        "code": "equals the price given (1367.71)",
+        "model": "",
+        "mark": "correct",
+        "correction": "",
+        "number": "$1,367.71"
+      },
+      {
+        "id": 2,
+        "part": "Market Positioning and Growth Outlook",
+        "cite": "[10-K L1366: \"Gross margin as a percent of revenue in 2025 increased 1.7 percentage points compared with 2024, primarily driven by favorable product mix and improved cost of production, partially offset by lower realized prices.\"]",
+        "code": "line found in the filing; number is on the line",
+        "model": "states_it: The cited line explicitly says gross margin increased by 1.7 percentage points in 2025, matching the report’s claim.",
+        "mark": "correct",
+        "correction": "",
+        "number": "1.7"
+      },
+      {
+        "id": 3,
+        "part": "Market Positioning and Growth Outlook",
+        "cite": "[10-K L1368: \"Research and development expenses increased 21 percent in 2025, primarily driven by continued investments in our early and late-stage portfolio.\"]",
+        "code": "line found in the filing; number is on the line",
+        "model": "states_it: The line states R&D expenses increased 21 percent in 2025, exactly as the report reports.",
+        "mark": "correct",
+        "correction": "",
+        "number": "21 %"
+      },
+      {
+        "id": 4,
+        "part": "Market Positioning and Growth Outlook",
+        "cite": "[10-K L1370: \"Marketing, selling, and administrative expenses increased 29 percent in 2025, primarily driven by promotional efforts supporting ongoing and planned launches.\"]",
+        "code": "line found in the filing; number is on the line",
+        "model": "states_it: The line states marketing, selling and administrative expenses increased 29 percent in 2025, which matches the report.",
+        "mark": "correct",
+        "correction": "",
+        "number": "29 %"
+      },
+      {
+        "id": 5,
+        "part": "Market Positioning and Growth Outlook",
+        "cite": "[XBRL LLY us-gaap:Revenues 2025-12-31]",
+        "code": "equals the facts file",
+        "model": "",
+        "mark": "correct",
+        "correction": "",
+        "number": "$65,179.0M"
+      },
+      {
+        "id": 6,
+        "part": "Market Positioning and Growth Outlook",
+        "cite": "[ratio revenue_growth: (65,179.0 - 45,043.0) / 45,043.0]",
+        "code": "recomputed: (65,179.0 - 45,043.0) / 45,043.0 = 44.70%",
+        "model": "",
+        "mark": "correct",
+        "correction": "",
+        "number": "44.70%"
+      },
+      {
+        "id": 7,
+        "part": "Market Positioning and Growth Outlook",
+        "cite": "[Release L146: \"Total Revenue | 24,397 | 17,601\"]",
+        "code": "line found in the filing; number is on the line",
+        "model": "states_it: The table row lists Total Revenue 24,397 (in millions) for the quarter, aligning with the report’s $24,397 M figure for Q3 2026.",
+        "mark": "correct",
+        "correction": "",
+        "number": "$24,397M"
+      },
+      {
+        "id": 8,
+        "part": "Market Positioning and Growth Outlook",
+        "cite": "[ratio quarter_revenue_growth: (24,397 - 17,601) / 17,601]",
+        "code": "recomputed: (24,397 - 17,601) / 17,601 = 38.61%",
+        "model": "",
+        "mark": "correct",
+        "correction": "",
+        "number": "38.61%"
+      },
+      {
+        "id": 9,
+        "part": "Market Positioning and Growth Outlook",
+        "cite": "[Release L376: \"Earnings per share (diluted) - Reported | $7.22\"]",
+        "code": "line found in the filing; number is on the line",
+        "model": "states_it: The row shows diluted EPS reported as $7.22 for the quarter, which is exactly the value cited by the report.",
+        "mark": "correct",
+        "correction": "",
+        "number": "$7.22"
+      },
+      {
+        "id": 10,
+        "part": "Market Positioning and Growth Outlook",
+        "cite": "[ratio revenue_growth: (65,011.0 - 64,168.0) / 64,168.0]",
+        "code": "recomputed: (65,011.0 - 64,168.0) / 64,168.0 = 1.31%",
+        "model": "",
+        "mark": "correct",
+        "correction": "",
+        "number": "1.31%"
+      },
+      {
+        "id": 11,
+        "part": "Market Positioning and Growth Outlook",
+        "cite": "[ratio revenue_growth: (62,579.0 - 63,627.0) / 63,627.0]",
+        "code": "recomputed: (62,579.0 - 63,627.0) / 63,627.0 = -1.65%",
+        "model": "",
+        "mark": "correct",
+        "correction": "",
+        "number": "-1.65%"
+      },
+      {
+        "id": 12,
+        "part": "Market Positioning and Growth Outlook",
+        "cite": "[ratio revenue_growth: (61,160.0 - 56,334.0) / 56,334.0]",
+        "code": "recomputed: (61,160.0 - 56,334.0) / 56,334.0 = 8.57%",
+        "model": "",
+        "mark": "correct",
+        "correction": "",
+        "number": "8.57%"
+      },
+      {
+        "id": 13,
+        "part": "Valuation Insights",
+        "cite": "[XBRL LLY us-gaap:NetIncomeLoss 2025-12-31]",
+        "code": "equals the facts file",
+        "model": "",
+        "mark": "correct",
+        "correction": "",
+        "number": "$20,640.0M"
+      },
+      {
+        "id": 14,
+        "part": "Valuation Insights",
+        "cite": "[XBRL LLY us-gaap:EarningsPerShareDiluted 2025-12-31]",
+        "code": "equals the facts file",
+        "model": "",
+        "mark": "correct",
+        "correction": "",
+        "number": "$22.95"
+      },
+      {
+        "id": 15,
+        "part": "Valuation Insights",
+        "cite": "[ratio net_margin: 20,640.0 / 65,179.0]",
+        "code": "recomputed: 20,640.0 / 65,179.0 = 31.67%",
+        "model": "",
+        "mark": "correct",
+        "correction": "",
+        "number": "31.67%"
+      },
+      {
+        "id": 16,
+        "part": "Valuation Insights",
+        "cite": "[ratio roae: 20,640.0 / ((26,535.0 + 14,272.0) / 2)]",
+        "code": "recomputed: 20,640.0 / ((26,535.0 + 14,272.0) / 2) = 101.16%",
+        "model": "",
+        "mark": "correct",
+        "correction": "",
+        "number": "101.16%"
+      },
+      {
+        "id": 17,
+        "part": "Valuation Insights",
+        "cite": "[ratio debt_to_equity: (40,868.0 + 1,635.0) / 26,535.0]",
+        "code": "recomputed: (40,868.0 + 1,635.0) / 26,535.0 = 1.60x",
+        "model": "",
+        "mark": "correct",
+        "correction": "",
+        "number": "1.60x"
+      },
+      {
+        "id": 18,
+        "part": "Valuation Insights",
+        "cite": "[ratio pe: 1367.71 / 22.95]",
+        "code": "recomputed: 1367.71 / 22.95 = 59.60x",
+        "model": "",
+        "mark": "correct",
+        "correction": "",
+        "number": "59.60x"
+      },
+      {
+        "id": 19,
+        "part": "Valuation Insights",
+        "cite": "[ratio revenue_growth: (65,179.0 - 45,043.0) / 45,043.0]",
+        "code": "recomputed: (65,179.0 - 45,043.0) / 45,043.0 = 44.70%",
+        "model": "",
+        "mark": "correct",
+        "correction": "",
+        "number": "44.70%"
+      },
+      {
+        "id": 20,
+        "part": "Valuation Insights",
+        "cite": "",
+        "code": "no source",
+        "model": "",
+        "mark": "unsupported",
+        "correction": "[XBRL LLY us-gaap:Revenues 2025-12-31]",
+        "number": "$65,179.0M"
+      },
+      {
+        "id": 21,
+        "part": "Valuation Insights",
+        "cite": "",
+        "code": "no source",
+        "model": "",
+        "mark": "unsupported",
+        "correction": "[ratio revenue_growth: (65,011.0 - 64,168.0) / 64,168.0]",
+        "number": "1.31%"
+      },
+      {
+        "id": 22,
+        "part": "Valuation Insights",
+        "cite": "",
+        "code": "no source",
+        "model": "",
+        "mark": "unsupported",
+        "correction": "[ratio revenue_growth: (62,579.0 - 63,627.0) / 63,627.0]",
+        "number": "-1.65%"
+      },
+      {
+        "id": 23,
+        "part": "Valuation Insights",
+        "cite": "",
+        "code": "no source",
+        "model": "",
+        "mark": "unsupported",
+        "correction": "[ratio revenue_growth: (61,160.0 - 56,334.0) / 56,334.0]",
+        "number": "8.57%"
+      },
+      {
+        "id": 24,
+        "part": "Future Developments and Strategic Recommendations",
+        "cite": "",
+        "code": "no source",
+        "model": "",
+        "mark": "unsupported",
+        "correction": "[ratio debt_to_equity: (40,868.0 + 1,635.0) / 26,535.0]",
+        "number": "1.60x"
+      },
+      {
+        "id": 25,
+        "part": "Investment Recommendation",
+        "cite": "[ratio revenue_growth: (65,179.0 - 45,043.0) / 45,043.0]",
+        "code": "recomputed: (65,179.0 - 45,043.0) / 45,043.0 = 44.70%",
+        "model": "",
+        "mark": "correct",
+        "correction": "",
+        "number": "44.70%"
+      },
+      {
+        "id": 26,
+        "part": "Investment Recommendation",
+        "cite": "[ratio revenue_growth: (65,179.0 - 45,043.0) / 45,043.0]",
+        "code": "recomputed: (65,179.0 - 45,043.0) / 45,043.0 = 44.70%",
+        "model": "",
+        "mark": "correct",
+        "correction": "",
+        "number": "44.70%"
+      },
+      {
+        "id": 27,
+        "part": "Investment Recommendation",
+        "cite": "",
+        "code": "no source",
+        "model": "",
+        "mark": "unsupported",
+        "correction": "[ratio revenue_growth: (65,011.0 - 64,168.0) / 64,168.0]",
+        "number": "1.31%"
+      },
+      {
+        "id": 28,
+        "part": "Investment Recommendation",
+        "cite": "",
+        "code": "no source",
+        "model": "",
+        "mark": "unsupported",
+        "correction": "[ratio revenue_growth: (62,579.0 - 63,627.0) / 63,627.0]",
+        "number": "-1.65%"
+      },
+      {
+        "id": 29,
+        "part": "Investment Recommendation",
+        "cite": "",
+        "code": "no source",
+        "model": "",
+        "mark": "unsupported",
+        "correction": "[ratio revenue_growth: (61,160.0 - 56,334.0) / 56,334.0]",
+        "number": "8.57%"
+      },
+      {
+        "id": 30,
+        "part": "Investment Recommendation",
+        "cite": "[ratio revenue_growth: (65,179.0 - 45,043.0) / 45,043.0]",
+        "code": "recomputed: (65,179.0 - 45,043.0) / 45,043.0 = 44.70%",
+        "model": "",
+        "mark": "correct",
+        "correction": "",
+        "number": "44.70%"
+      },
+      {
+        "id": 31,
+        "part": "Investment Recommendation",
+        "cite": "",
+        "code": "no source",
+        "model": "",
+        "mark": "unsupported",
+        "correction": "[XBRL LLY us-gaap:Revenues 2025-12-31]",
+        "number": "$65,179.0M"
+      }
+    ]
+  }
+}

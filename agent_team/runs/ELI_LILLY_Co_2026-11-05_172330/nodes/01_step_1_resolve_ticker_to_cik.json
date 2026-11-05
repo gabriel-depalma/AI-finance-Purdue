@@ -1,0 +1,18 @@
+{
+  "node": "Step 1 Resolve ticker to CIK",
+  "input": {
+    "ticker": "LLY",
+    "peers": [
+      "MRK",
+      "PFE",
+      "ABBV"
+    ],
+    "price": 1367.71,
+    "uses_steps": []
+  },
+  "output": {
+    "ticker": "LLY",
+    "cik": 59478,
+    "title": "ELI LILLY & Co"
+  }
+}

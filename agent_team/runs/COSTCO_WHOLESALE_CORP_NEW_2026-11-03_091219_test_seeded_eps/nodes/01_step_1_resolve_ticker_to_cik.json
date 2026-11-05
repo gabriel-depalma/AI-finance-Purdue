@@ -1,0 +1,18 @@
+{
+  "node": "Step 1 Resolve ticker to CIK",
+  "input": {
+    "ticker": "COST",
+    "peers": [
+      "WMT",
+      "TGT",
+      "BJ"
+    ],
+    "price": 992.13,
+    "uses_steps": []
+  },
+  "output": {
+    "ticker": "COST",
+    "cik": 909832,
+    "title": "COSTCO WHOLESALE CORP /NEW"
+  }
+}

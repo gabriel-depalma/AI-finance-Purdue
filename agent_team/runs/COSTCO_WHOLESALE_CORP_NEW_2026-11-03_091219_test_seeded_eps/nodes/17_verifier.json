@@ -1,0 +1,1110 @@
+{
+  "node": "Verifier",
+  "input": {
+    "report": "report.md",
+    "filing_texts": [
+      "10-K.txt",
+      "10-Q.txt",
+      "8-K_EX-99.1_release.txt"
+    ],
+    "facts": "facts.json",
+    "model_packet": {
+      "task": "For each item, decide whether the cited filing line states the number for the period and in the definition the report sentence claims; if not, give the right number.",
+      "context": {
+        "items": [
+          {
+            "id": 2,
+            "number_as_written": "4,000",
+            "report_sentence": "Each warehouse carries less than 4,000 active stock-keeping units, a markedly smaller assortment than typical broad-line retailers [10-K L182: \"less than 4,000 active stock keeping units\"].",
+            "cited_document": "10-K",
+            "cited_line": "L182: Our strategy is to provide our members with a broad range of high-quality merchandise at prices we believe are consistently lower than elsewhere. We seek to limit most items to fast-selling models, sizes, and colors. We carry less than 4,000 active stock keeping units (SKUs) per warehouse in our core warehouse business, significantly less than other broadline retailers. We average from 9,000 to 11,000 SKUs online, some of which are available in our warehouses. Many consumable products are offered for sale in case, carton, or multiple-pack quantities only.",
+            "table_column_header": "",
+            "lines_before": [
+              "L178: Our average warehouse space is approximately 148,000 square feet, with newer units being slightly larger. Floor plans are designed for efficiency in the use of selling space, the handling of merchandise, and the control of inventory. Because shoppers are attracted principally by the quality of merch",
+              "L180: Our operating hours are shorter than many other retailers, and due to other efficiencies inherent in a warehouse club operation, we believe labor costs are lower relative to the volume of sales. In the U.S., we offer exclusive shopping hours for our Executive members and our gasoline operations gene"
+            ]
+          },
+          {
+            "id": 3,
+            "number_as_written": "$65",
+            "report_sentence": "Members pay an annual fee for memberships is $65 in the United States, providing a steady recurring revenue stream [10-K L214: \"annual fee for memberships is $65\"].",
+            "cited_document": "10-K",
+            "cited_line": "L214: Our members may utilize their memberships at all of our warehouses and e-commerce sites. Our annual fee for memberships is $65 in the U.S., varies in other countries and includes a free household card.",
+            "table_column_header": "",
+            "lines_before": [
+              "L210: Certain financial information for our segments and geographic areas is included in Note 11 to the consolidated financial statements included in Item 8 of this Report.",
+              "L212: Membership"
+            ]
+          },
+          {
+            "id": 4,
+            "number_as_written": "11%",
+            "report_sentence": "The gasoline business represented 11% of total net sales in 2026, helping to increase traffic to warehouses [10-K L200: \"gasoline business represented 11% of total net sales\"].",
+            "cited_document": "10-K",
+            "cited_line": "L200: Warehouse ancillary operate primarily within, next to or near our warehouses, encouraging more frequent shopping. The number of warehouses with gas stations varies significantly by country. We operated 774 gas stations at the end of 2026. Our gasoline business represented 11% of total net sales in 2026.",
+            "table_column_header": "",
+            "lines_before": [
+              "L196: ■Warehouse Ancillary (includes gasoline, pharmacy, food court, optical, hearing aids, and tire installation)",
+              "L198: ■Other Businesses (includes e-commerce, business centers, travel, and other)"
+            ]
+          },
+          {
+            "id": 5,
+            "number_as_written": "10%",
+            "report_sentence": "Net sales increased 10% to $297,247 driven by stronger comparable sales and the newly opened locations [10-K L712: \"Net sales increased 10% to $297,247\"].",
+            "cited_document": "10-K",
+            "cited_line": "L712: •Net sales increased 10% to $297,247, driven by an increase in comparable sales and sales at new warehouses;",
+            "table_column_header": "",
+            "lines_before": [
+              "L708: Highlights for 2026 include:",
+              "L710: •We opened 28 new warehouses, including three relocations, for a total of 25 net new warehouses: 18 in the U.S., five in our Canadian segment, and two in our Other International segment, compared to 27 new warehouses, including three relocations, in 2025;"
+            ]
+          },
+          {
+            "id": 6,
+            "number_as_written": "$297,247",
+            "report_sentence": "Net sales increased 10% to $297,247 driven by stronger comparable sales and the newly opened locations [10-K L712: \"Net sales increased 10% to $297,247\"].",
+            "cited_document": "10-K",
+            "cited_line": "L712: •Net sales increased 10% to $297,247, driven by an increase in comparable sales and sales at new warehouses;",
+            "table_column_header": "",
+            "lines_before": [
+              "L708: Highlights for 2026 include:",
+              "L710: •We opened 28 new warehouses, including three relocations, for a total of 25 net new warehouses: 18 in the U.S., five in our Canadian segment, and two in our Other International segment, compared to 27 new warehouses, including three relocations, in 2025;"
+            ]
+          },
+          {
+            "id": 7,
+            "number_as_written": "11%",
+            "report_sentence": "Higher gasoline prices positively impacted net sales [10-K L714: \"Higher gasoline prices positively impacted net sales\"], and membership fee revenue increased 11% to $5,907 [10-K L716: \"Membership fee revenue increased 11% to $5,907\"].",
+            "cited_document": "10-K",
+            "cited_line": "L716: •Membership fee revenue increased 11% to $5,907, driven by new member sign-ups, membership fee increases, and upgrades to Executive membership;",
+            "table_column_header": "",
+            "lines_before": [
+              "L712: •Net sales increased 10% to $297,247, driven by an increase in comparable sales and sales at new warehouses;",
+              "L714: •Higher gasoline prices positively impacted net sales by $3,501, or 130 basis points, and changes in foreign currencies positively impacted net sales by $1,332, or 49 basis points;"
+            ]
+          },
+          {
+            "id": 8,
+            "number_as_written": "$5,907",
+            "report_sentence": "Higher gasoline prices positively impacted net sales [10-K L714: \"Higher gasoline prices positively impacted net sales\"], and membership fee revenue increased 11% to $5,907 [10-K L716: \"Membership fee revenue increased 11% to $5,907\"].",
+            "cited_document": "10-K",
+            "cited_line": "L716: •Membership fee revenue increased 11% to $5,907, driven by new member sign-ups, membership fee increases, and upgrades to Executive membership;",
+            "table_column_header": "",
+            "lines_before": [
+              "L712: •Net sales increased 10% to $297,247, driven by an increase in comparable sales and sales at new warehouses;",
+              "L714: •Higher gasoline prices positively impacted net sales by $3,501, or 130 basis points, and changes in foreign currencies positively impacted net sales by $1,332, or 49 basis points;"
+            ]
+          },
+          {
+            "id": 9,
+            "number_as_written": "$22,457",
+            "report_sentence": "Comparable sales grew $22,457 or 8% primarily from higher average ticket and shopping frequency [10-K L782: \"increase in comparable sales of $22,457 or 8%\"].",
+            "cited_document": "10-K",
+            "cited_line": "L780: Net sales increased $27,335 or 10% during 2026. The improvement was primarily attributable to an increase in comparable sales of $22,457 or 8%. Comparable sales were positively impacted by increases of 5% in average ticket and 3% in shopping frequency. The remaining increase in net sales was driven by sales at the 25 net new warehouses opened since the end of 2025.",
+            "table_column_header": "",
+            "lines_before": [
+              "L776: _______________",
+              "L778: (1)Comparable sales for 2024 were calculated using comparable retail weeks."
+            ]
+          },
+          {
+            "id": 10,
+            "number_as_written": "8%",
+            "report_sentence": "Comparable sales grew $22,457 or 8% primarily from higher average ticket and shopping frequency [10-K L782: \"increase in comparable sales of $22,457 or 8%\"].",
+            "cited_document": "10-K",
+            "cited_line": "L780: Net sales increased $27,335 or 10% during 2026. The improvement was primarily attributable to an increase in comparable sales of $22,457 or 8%. Comparable sales were positively impacted by increases of 5% in average ticket and 3% in shopping frequency. The remaining increase in net sales was driven by sales at the 25 net new warehouses opened since the end of 2025.",
+            "table_column_header": "",
+            "lines_before": [
+              "L776: _______________",
+              "L778: (1)Comparable sales for 2024 were calculated using comparable retail weeks."
+            ]
+          },
+          {
+            "id": 11,
+            "number_as_written": "7%",
+            "report_sentence": "The volume of gasoline sold increased 7% contributing additional net-sales uplift [10-K L786: \"volume of gasoline sold increased 7%\"].",
+            "cited_document": "10-K",
+            "cited_line": "L786: Higher gasoline prices positively impacted net sales by $3,501, or 130 basis points, with a 12% increase in the average price per gallon. The volume of gasoline sold increased 7%, positively impacting net sales by $1,913, or 71 basis points.",
+            "table_column_header": "",
+            "lines_before": [
+              "L782: Digitally-enabled comparable sales increased 21% during 2026, both as reported and excluding the impact of changes in foreign currencies.",
+              "L784: Sales increased $17,136 or 8% in core merchandise categories, increasing in all categories. Sales in warehouse ancillary and other businesses increased $10,199, or 20%, led by gasoline and pharmacy."
+            ]
+          },
+          {
+            "id": 12,
+            "number_as_written": "$1,332",
+            "report_sentence": "Changes in foreign currencies positively impacted net sales by $1,332 [10-K L788: \"Changes in foreign currencies relative to the U.S. dollar positively impacted net sales by $1,332\"].",
+            "cited_document": "10-K",
+            "cited_line": "L788: Changes in foreign currencies relative to the U.S. dollar positively impacted net sales by $1,332, or 49 basis points, attributable to our Other International and Canadian operations.",
+            "table_column_header": "",
+            "lines_before": [
+              "L784: Sales increased $17,136 or 8% in core merchandise categories, increasing in all categories. Sales in warehouse ancillary and other businesses increased $10,199, or 20%, led by gasoline and pharmacy.",
+              "L786: Higher gasoline prices positively impacted net sales by $3,501, or 130 basis points, with a 12% increase in the average price per gallon. The volume of gasoline sold increased 7%, positively impacting net sales by $1,913, or 71 basis points."
+            ]
+          },
+          {
+            "id": 15,
+            "number_as_written": "$95,723M",
+            "report_sentence": "- Q4 total revenue (latest quarter): $95,723M [Release L74: \"Total revenue | 95,723 | 86,156\"]",
+            "cited_document": "Release",
+            "cited_line": "L74: Total revenue | 95,723 | 86,156 | 303,154 | 275,235",
+            "table_column_header": "L64: 16 Weeks Ended | 52 Weeks Ended\nL66: August 30, 2026 | August 31, 2025 | August 30, 2026 | August 31, 2025",
+            "lines_before": [
+              "L70: Net sales | $93,873 | $84,432 | $297,247 | $269,912",
+              "L72: Membership fees | 1,850 | 1,724 | 5,907 | 5,323"
+            ]
+          },
+          {
+            "id": 17,
+            "number_as_written": "$6.75",
+            "report_sentence": "- Q4 GAAP diluted EPS: $6.75 [Release L100: \"Diluted | $6.75\"]",
+            "cited_document": "Release",
+            "cited_line": "L100: Diluted | $6.75 | $5.87 | $20.76 | $18.21",
+            "table_column_header": "L64: 16 Weeks Ended | 52 Weeks Ended\nL66: August 30, 2026 | August 31, 2025 | August 30, 2026 | August 31, 2025",
+            "lines_before": [
+              "L96: NET INCOME PER COMMON SHARE:",
+              "L98: Basic | $6.75 | $5.88 | $20.78 | $18.24"
+            ]
+          },
+          {
+            "id": 51,
+            "number_as_written": "$174",
+            "report_sentence": "Costco received IEEPA tariff refunds including $174 in refunds and $10 interest income, which were partially reinvested to benefit members [10-K L734: \"received $184, made up of $174 in refunds\"].",
+            "cited_document": "10-K",
+            "cited_line": "L732: We applied the gain contingency model, in accordance with Accounting Standards Codification (ASC) 450-30, “Gain Contingencies,” recognizing recoveries in our consolidated statements of operations only as they were realized. During 2026, we began filing for refunds and received $184, made up of $174 in refunds, recorded as a reduction to merchandise costs, and $10 recorded as interest income. A portion of these refunds was invested in reducing prices for members. Subsequent to 2026, we received $155 in additional refunds and we intend to continue to invest the majority of the refunds in increas",
+            "table_column_header": "",
+            "lines_before": [
+              "L728: Tariff Impacts",
+              "L730: Beginning in February 2025, the United States imposed tariffs under the International Emergency Economic Powers Act (IEEPA) on certain goods, materials, and products imported into the United States. We paid the government approximately $500 in IEEPA tariffs. In February 2026, the U.S. Supreme Court "
+            ]
+          },
+          {
+            "id": 52,
+            "number_as_written": "$10",
+            "report_sentence": "Costco received IEEPA tariff refunds including $174 in refunds and $10 interest income, which were partially reinvested to benefit members [10-K L734: \"received $184, made up of $174 in refunds\"].",
+            "cited_document": "10-K",
+            "cited_line": "L732: We applied the gain contingency model, in accordance with Accounting Standards Codification (ASC) 450-30, “Gain Contingencies,” recognizing recoveries in our consolidated statements of operations only as they were realized. During 2026, we began filing for refunds and received $184, made up of $174 in refunds, recorded as a reduction to merchandise costs, and $10 recorded as interest income. A portion of these refunds was invested in reducing prices for members. Subsequent to 2026, we received $155 in additional refunds and we intend to continue to invest the majority of the refunds in increas",
+            "table_column_header": "",
+            "lines_before": [
+              "L728: Tariff Impacts",
+              "L730: Beginning in February 2025, the United States imposed tariffs under the International Emergency Economic Powers Act (IEEPA) on certain goods, materials, and products imported into the United States. We paid the government approximately $500 in IEEPA tariffs. In February 2026, the U.S. Supreme Court "
+            ]
+          },
+          {
+            "id": 53,
+            "number_as_written": "13%",
+            "report_sentence": "The Board approved a 13% increase in the quarterly cash dividend in April [10-K L726: \"approved a 13% increase in the quarterly cash dividend\"].",
+            "cited_document": "10-K",
+            "cited_line": "L726: •In April, the Board of Directors approved a 13% increase in the quarterly cash dividend.",
+            "table_column_header": "",
+            "lines_before": [
+              "L722: •The effective tax rate in 2026 was 24.7%, compared to 25.1% in 2025;",
+              "L724: •Net income increased 14% to $9,226, $20.76 per diluted share, compared to $8,099, $18.21 per diluted share in 2025; and"
+            ]
+          },
+          {
+            "id": 54,
+            "number_as_written": "$6,435",
+            "report_sentence": "Capital expenditure in 2026 was $6,435 with a plan to spend approximately $7,500 in fiscal 2027 [10-K L904: \"spent $6,435 on capital expenditures\"].",
+            "cited_document": "10-K",
+            "cited_line": "L904: Our primary requirements for capital are acquiring land, buildings, and equipment for new and remodeled warehouses, information systems, and manufacturing and distribution facilities. In 2026, we spent $6,435 on capital expenditures, and it is our current intention to spend approximately $7,500 during fiscal 2027. These expenditures are expected to be financed with cash from operations, cash and cash equivalents, and short-term investments. We opened 28 new warehouses, including three relocations, in 2026, and plan to open up to 33 new warehouses, including five relocations, in 2027. There can",
+            "table_column_header": "",
+            "lines_before": [
+              "L900: Net cash used in investing activities totaled $6,378 in 2026, compared to $5,311 in 2025, and is primarily related to capital expenditures. Net cash from investing activities also includes purchases and maturities of short-term investments.",
+              "L902: Capital Expenditure Plans"
+            ]
+          },
+          {
+            "id": 55,
+            "number_as_written": "$7,500",
+            "report_sentence": "Capital expenditure in 2026 was $6,435 with a plan to spend approximately $7,500 in fiscal 2027 [10-K L904: \"spent $6,435 on capital expenditures\"].",
+            "cited_document": "10-K",
+            "cited_line": "L904: Our primary requirements for capital are acquiring land, buildings, and equipment for new and remodeled warehouses, information systems, and manufacturing and distribution facilities. In 2026, we spent $6,435 on capital expenditures, and it is our current intention to spend approximately $7,500 during fiscal 2027. These expenditures are expected to be financed with cash from operations, cash and cash equivalents, and short-term investments. We opened 28 new warehouses, including three relocations, in 2026, and plan to open up to 33 new warehouses, including five relocations, in 2027. There can",
+            "table_column_header": "",
+            "lines_before": [
+              "L900: Net cash used in investing activities totaled $6,378 in 2026, compared to $5,311 in 2025, and is primarily related to capital expenditures. Net cash from investing activities also includes purchases and maturities of short-term investments.",
+              "L902: Capital Expenditure Plans"
+            ]
+          },
+          {
+            "id": 56,
+            "number_as_written": "$2,118",
+            "report_sentence": "Bank borrowing capacity expanded to $2,118 as of August 30, 2026, supporting future growth [10-K L928: \"borrowing capacity ... $2,118\"].",
+            "cited_document": "10-K",
+            "cited_line": "L928: We maintain bank credit facilities for working capital and general corporate purposes. At August 30, 2026, we had borrowing capacity under these facilities of $2,118, compared to $1,220 at the end of 2025. This increase was primarily driven by the renewal and expansion of our U.S. revolving credit facility in August 2026, which increased total borrowing capacity from $400 to $1,000 and extended the maturity date to August 2027, as well as credit facility expansions in our Japan and Mexico subsidiaries. Our Canadian and Other International operations maintain $1,012 of this capacity under bank ",
+            "table_column_header": "",
+            "lines_before": [
+              "L924: On January 19, 2023, the Board of Directors authorized a share repurchase program in the amount of $4,000, which expires in January 2027. During 2026 and 2025, we repurchased 891,000 and 943,000 shares of common stock, at an average price per share of $950.90 and $957.66, totaling $847 and $903. The",
+              "L926: Bank Credit Facilities and Commercial Paper Programs"
+            ]
+          },
+          {
+            "id": 58,
+            "number_as_written": "$0.15",
+            "report_sentence": "The fourth-quarter net income benefited from a non-recurring benefit of $0.15 per diluted share from IEEPA tariff refunds [Release L36: \"non-recurring benefit of $0.15 per diluted share\"].",
+            "cited_document": "Release",
+            "cited_line": "L36: Net income for the fourth quarter was $2.998 billion, $6.75 per diluted share, compared to $2.610 billion, $5.87 per diluted share, last year. This year's fourth quarter was positively impacted by a non-recurring benefit of $0.15 per diluted share from IEEPA tariff refunds received in the quarter, less partial reinvestment of those refunds in increased member values. Net income for the fiscal year was $9.226 billion, $20.76 per diluted share, compared to $8.099 billion, $18.21 per diluted share, last year.",
+            "table_column_header": "",
+            "lines_before": [
+              "L32: Digitally-Enabled | 19.5% | 19.8% | 20.9% | 20.7%",
+              "L34: *Excluding the impacts from changes in gasoline prices and foreign exchange."
+            ]
+          },
+          {
+            "id": 59,
+            "number_as_written": "11%",
+            "report_sentence": "- **Membership fee revenue**: Track the 11% increase to $5,907 million [10-K L716] and any changes to the $65 annual fee [10-K L214].",
+            "cited_document": "10-K",
+            "cited_line": "L716: •Membership fee revenue increased 11% to $5,907, driven by new member sign-ups, membership fee increases, and upgrades to Executive membership;",
+            "table_column_header": "",
+            "lines_before": [
+              "L712: •Net sales increased 10% to $297,247, driven by an increase in comparable sales and sales at new warehouses;",
+              "L714: •Higher gasoline prices positively impacted net sales by $3,501, or 130 basis points, and changes in foreign currencies positively impacted net sales by $1,332, or 49 basis points;"
+            ]
+          },
+          {
+            "id": 60,
+            "number_as_written": "$5,907 million",
+            "report_sentence": "- **Membership fee revenue**: Track the 11% increase to $5,907 million [10-K L716] and any changes to the $65 annual fee [10-K L214].",
+            "cited_document": "10-K",
+            "cited_line": "L716: •Membership fee revenue increased 11% to $5,907, driven by new member sign-ups, membership fee increases, and upgrades to Executive membership;",
+            "table_column_header": "",
+            "lines_before": [
+              "L712: •Net sales increased 10% to $297,247, driven by an increase in comparable sales and sales at new warehouses;",
+              "L714: •Higher gasoline prices positively impacted net sales by $3,501, or 130 basis points, and changes in foreign currencies positively impacted net sales by $1,332, or 49 basis points;"
+            ]
+          },
+          {
+            "id": 61,
+            "number_as_written": "$65",
+            "report_sentence": "- **Membership fee revenue**: Track the 11% increase to $5,907 million [10-K L716] and any changes to the $65 annual fee [10-K L214].",
+            "cited_document": "10-K",
+            "cited_line": "L214: Our members may utilize their memberships at all of our warehouses and e-commerce sites. Our annual fee for memberships is $65 in the U.S., varies in other countries and includes a free household card.",
+            "table_column_header": "",
+            "lines_before": [
+              "L210: Certain financial information for our segments and geographic areas is included in Note 11 to the consolidated financial statements included in Item 8 of this Report.",
+              "L212: Membership"
+            ]
+          },
+          {
+            "id": 65,
+            "number_as_written": "20.9%",
+            "report_sentence": "- **Digital sales share**: The 20.9% digitally-enabled sales portion [Release L32] should rise, signaling stronger e-commerce capture.",
+            "cited_document": "Release",
+            "cited_line": "L32: Digitally-Enabled | 19.5% | 19.8% | 20.9% | 20.7%",
+            "table_column_header": "L12: COSTCO WHOLESALE CORPORATION REPORTS FOURTH QUARTER AND FISCAL YEAR 2026 OPERATING RESULTS\nL14: ISSAQUAH, Wash., September 24, 2026 - Costco Wholesale Corporation (“Costco” or the “Company”) (Nasdaq: COST) today announced its operating results for the 16-week fourth quarter and the 52-week fiscal year ended August 30, 2026.",
+            "lines_before": [
+              "L28: Other International | 7.0% | 6.2% | 9.8% | 6.5%",
+              "L30: Total Company | 9.4% | 6.7% | 8.4% | 6.6%"
+            ]
+          },
+          {
+            "id": 73,
+            "number_as_written": "$0.15",
+            "report_sentence": "- **Regulatory or tariff impacts**: Loss of IEEPA tariff refunds that contributed a non-recurring benefit of $0.15 per diluted share [Release L36] could affect net income.",
+            "cited_document": "Release",
+            "cited_line": "L36: Net income for the fourth quarter was $2.998 billion, $6.75 per diluted share, compared to $2.610 billion, $5.87 per diluted share, last year. This year's fourth quarter was positively impacted by a non-recurring benefit of $0.15 per diluted share from IEEPA tariff refunds received in the quarter, less partial reinvestment of those refunds in increased member values. Net income for the fiscal year was $9.226 billion, $20.76 per diluted share, compared to $8.099 billion, $18.21 per diluted share, last year.",
+            "table_column_header": "",
+            "lines_before": [
+              "L32: Digitally-Enabled | 19.5% | 19.8% | 20.9% | 20.7%",
+              "L34: *Excluding the impacts from changes in gasoline prices and foreign exchange."
+            ]
+          }
+        ]
+      },
+      "expected_output": "JSON with 'items': one entry per item with 'id', 'verdict' ('states_it' or 'does_not'), 'reason', 'corrected_value' (empty if states_it) and 'corrected_line' (0 if none)."
+    }
+  },
+  "output": {
+    "counts": {
+      "correct": 60,
+      "wrong": 1,
+      "unsupported": 17
+    },
+    "verified_report": "verified_report.md",
+    "items": [
+      {
+        "id": 1,
+        "part": "",
+        "cite": "[price given with --price]",
+        "code": "equals the price given (992.13)",
+        "model": "",
+        "mark": "correct",
+        "correction": "",
+        "number": "$992.13"
+      },
+      {
+        "id": 2,
+        "part": "Overview",
+        "cite": "[10-K L182: \"less than 4,000 active stock keeping units\"]",
+        "code": "line found in the filing; number is on the line",
+        "model": "states_it: The cited line explicitly says the warehouse carries less than 4,000 active SKUs per warehouse.",
+        "mark": "correct",
+        "correction": "",
+        "number": "4,000"
+      },
+      {
+        "id": 3,
+        "part": "Overview",
+        "cite": "[10-K L214: \"annual fee for memberships is $65\"]",
+        "code": "line found in the filing; number is on the line",
+        "model": "states_it: The line states the annual membership fee is $65 in the U.S.",
+        "mark": "correct",
+        "correction": "",
+        "number": "$65"
+      },
+      {
+        "id": 4,
+        "part": "Overview",
+        "cite": "[10-K L200: \"gasoline business represented 11% of total net sales\"]",
+        "code": "line found in the filing; number is on the line",
+        "model": "states_it: The line confirms the gasoline business represented 11% of total net sales in 2026.",
+        "mark": "correct",
+        "correction": "",
+        "number": "11%"
+      },
+      {
+        "id": 5,
+        "part": "Market Positioning and Growth Outlook",
+        "cite": "[10-K L712: \"Net sales increased 10% to $297,247\"]",
+        "code": "line found in the filing; number is on the line",
+        "model": "states_it: The line reports net sales increased 10% to $297,247.",
+        "mark": "correct",
+        "correction": "",
+        "number": "10%"
+      },
+      {
+        "id": 6,
+        "part": "Market Positioning and Growth Outlook",
+        "cite": "[10-K L712: \"Net sales increased 10% to $297,247\"]",
+        "code": "line found in the filing; number is on the line",
+        "model": "states_it: The line reports net sales increased 10% to $297,247, matching the figure.",
+        "mark": "correct",
+        "correction": "",
+        "number": "$297,247"
+      },
+      {
+        "id": 7,
+        "part": "Market Positioning and Growth Outlook",
+        "cite": "[10-K L716: \"Membership fee revenue increased 11% to $5,907\"]",
+        "code": "line found in the filing; number is on the line",
+        "model": "states_it: The line shows membership fee revenue increased 11% to $5,907.",
+        "mark": "correct",
+        "correction": "",
+        "number": "11%"
+      },
+      {
+        "id": 8,
+        "part": "Market Positioning and Growth Outlook",
+        "cite": "[10-K L716: \"Membership fee revenue increased 11% to $5,907\"]",
+        "code": "line found in the filing; number is on the line",
+        "model": "states_it: The line shows membership fee revenue increased to $5,907.",
+        "mark": "correct",
+        "correction": "",
+        "number": "$5,907"
+      },
+      {
+        "id": 9,
+        "part": "Market Positioning and Growth Outlook",
+        "cite": "[10-K L782: \"increase in comparable sales of $22,457 or 8%\"]",
+        "code": "quote found on L780, not the cited line; line found in the filing; number is on the line",
+        "model": "states_it: The line states comparable sales increased by $22,457 (or 8%).",
+        "mark": "correct",
+        "correction": "",
+        "number": "$22,457"
+      },
+      {
+        "id": 10,
+        "part": "Market Positioning and Growth Outlook",
+        "cite": "[10-K L782: \"increase in comparable sales of $22,457 or 8%\"]",
+        "code": "quote found on L780, not the cited line; line found in the filing; number is on the line",
+        "model": "states_it: The line states comparable sales grew 8%.",
+        "mark": "correct",
+        "correction": "",
+        "number": "8%"
+      },
+      {
+        "id": 11,
+        "part": "Market Positioning and Growth Outlook",
+        "cite": "[10-K L786: \"volume of gasoline sold increased 7%\"]",
+        "code": "line found in the filing; number is on the line",
+        "model": "states_it: The line reports the volume of gasoline sold increased 7%.",
+        "mark": "correct",
+        "correction": "",
+        "number": "7%"
+      },
+      {
+        "id": 12,
+        "part": "Market Positioning and Growth Outlook",
+        "cite": "[10-K L788: \"Changes in foreign currencies relative to the U.S. dollar positively impacted net sales by $1,332\"]",
+        "code": "line found in the filing; number is on the line",
+        "model": "states_it: The line indicates foreign currency changes positively impacted net sales by $1,332.",
+        "mark": "correct",
+        "correction": "",
+        "number": "$1,332"
+      },
+      {
+        "id": 13,
+        "part": "Market Positioning and Growth Outlook",
+        "cite": "[XBRL COST us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax 2026-08-30]",
+        "code": "equals the facts file",
+        "model": "",
+        "mark": "correct",
+        "correction": "",
+        "number": "$303,154.0M"
+      },
+      {
+        "id": 14,
+        "part": "Market Positioning and Growth Outlook",
+        "cite": "[ratio revenue_growth: (303,154.0 - 275,235.0) / 275,235.0]",
+        "code": "recomputed: (303,154.0 - 275,235.0) / 275,235.0 = 10.14%",
+        "model": "",
+        "mark": "correct",
+        "correction": "",
+        "number": "10.14%"
+      },
+      {
+        "id": 15,
+        "part": "Market Positioning and Growth Outlook",
+        "cite": "[Release L74: \"Total revenue | 95,723 | 86,156\"]",
+        "code": "line found in the filing; number is on the line",
+        "model": "states_it: The table line lists total revenue of 95,723 (in millions) for the quarter, matching $95,723M.",
+        "mark": "correct",
+        "correction": "",
+        "number": "$95,723M"
+      },
+      {
+        "id": 16,
+        "part": "Market Positioning and Growth Outlook",
+        "cite": "[ratio quarter_revenue_growth: (95,723 - 86,156) / 86,156]",
+        "code": "recomputed: (95,723 - 86,156) / 86,156 = 11.10%",
+        "model": "",
+        "mark": "correct",
+        "correction": "",
+        "number": "11.10%"
+      },
+      {
+        "id": 17,
+        "part": "Market Positioning and Growth Outlook",
+        "cite": "[Release L100: \"Diluted | $6.75\"]",
+        "code": "line found in the filing; number is on the line",
+        "model": "states_it: The table line shows diluted EPS of $6.75 for the quarter.",
+        "mark": "correct",
+        "correction": "",
+        "number": "$6.75"
+      },
+      {
+        "id": 18,
+        "part": "Market Positioning and Growth Outlook",
+        "cite": "[ratio revenue_growth: (303,154.0 - 275,235.0) / 275,235.0]",
+        "code": "recomputed: (303,154.0 - 275,235.0) / 275,235.0 = 10.14%",
+        "model": "",
+        "mark": "correct",
+        "correction": "",
+        "number": "10.14%"
+      },
+      {
+        "id": 19,
+        "part": "Market Positioning and Growth Outlook",
+        "cite": "[ratio revenue_growth: (713,163.0 - 680,985.0) / 680,985.0]",
+        "code": "recomputed: (713,163.0 - 680,985.0) / 680,985.0 = 4.73%",
+        "model": "",
+        "mark": "correct",
+        "correction": "",
+        "number": "4.73%"
+      },
+      {
+        "id": 20,
+        "part": "Market Positioning and Growth Outlook",
+        "cite": "[ratio revenue_growth: (104,780.0 - 106,566.0) / 106,566.0]",
+        "code": "recomputed: (104,780.0 - 106,566.0) / 106,566.0 = -1.68%",
+        "model": "",
+        "mark": "correct",
+        "correction": "",
+        "number": "-1.68%"
+      },
+      {
+        "id": 21,
+        "part": "Market Positioning and Growth Outlook",
+        "cite": "[ratio revenue_growth: (21,457.3 - 20,501.8) / 20,501.8]",
+        "code": "recomputed: (21,457.3 - 20,501.8) / 20,501.8 = 4.66%",
+        "model": "",
+        "mark": "correct",
+        "correction": "",
+        "number": "4.66%"
+      },
+      {
+        "id": 22,
+        "part": "Market Positioning and Growth Outlook",
+        "cite": "[ratio operating_margin: 11,685.0 / 303,154.0]",
+        "code": "recomputed: 11,685.0 / 303,154.0 = 3.85%",
+        "model": "",
+        "mark": "correct",
+        "correction": "",
+        "number": "3.85%"
+      },
+      {
+        "id": 23,
+        "part": "Market Positioning and Growth Outlook",
+        "cite": "[ratio operating_margin: 29,825.0 / 713,163.0]",
+        "code": "recomputed: 29,825.0 / 713,163.0 = 4.18%",
+        "model": "",
+        "mark": "correct",
+        "correction": "",
+        "number": "4.18%"
+      },
+      {
+        "id": 24,
+        "part": "Market Positioning and Growth Outlook",
+        "cite": "[ratio operating_margin: 5,117.0 / 104,780.0]",
+        "code": "recomputed: 5,117.0 / 104,780.0 = 4.88%",
+        "model": "",
+        "mark": "correct",
+        "correction": "",
+        "number": "4.88%"
+      },
+      {
+        "id": 25,
+        "part": "Market Positioning and Growth Outlook",
+        "cite": "[ratio operating_margin: 816.6 / 21,457.3]",
+        "code": "recomputed: 816.6 / 21,457.3 = 3.81%",
+        "model": "",
+        "mark": "correct",
+        "correction": "",
+        "number": "3.81%"
+      },
+      {
+        "id": 26,
+        "part": "Market Positioning and Growth Outlook",
+        "cite": "[ratio roae: 9,226.0 / ((35,803.0 + 29,164.0) / 2)]",
+        "code": "recomputed: 9,226.0 / ((35,803.0 + 29,164.0) / 2) = 28.40%",
+        "model": "",
+        "mark": "correct",
+        "correction": "",
+        "number": "28.40%"
+      },
+      {
+        "id": 27,
+        "part": "Market Positioning and Growth Outlook",
+        "cite": "[ratio roae: 21,893.0 / ((99,617.0 + 91,013.0) / 2)]",
+        "code": "recomputed: 21,893.0 / ((99,617.0 + 91,013.0) / 2) = 22.97%",
+        "model": "",
+        "mark": "correct",
+        "correction": "",
+        "number": "22.97%"
+      },
+      {
+        "id": 28,
+        "part": "Market Positioning and Growth Outlook",
+        "cite": "[ratio roae: 3,705.0 / ((16,165.0 + 14,666.0) / 2)]",
+        "code": "recomputed: 3,705.0 / ((16,165.0 + 14,666.0) / 2) = 24.03%",
+        "model": "",
+        "mark": "correct",
+        "correction": "",
+        "number": "24.03%"
+      },
+      {
+        "id": 29,
+        "part": "Market Positioning and Growth Outlook",
+        "cite": "[ratio roae: 578.4 / ((2,197.7 + 1,847.5) / 2)]",
+        "code": "recomputed: 578.4 / ((2,197.7 + 1,847.5) / 2) = 28.60%",
+        "model": "",
+        "mark": "correct",
+        "correction": "",
+        "number": "28.60%"
+      },
+      {
+        "id": 30,
+        "part": "Market Positioning and Growth Outlook",
+        "cite": "[ratio debt_to_equity: (3,914.0 + 2,248.0) / 35,803.0]",
+        "code": "recomputed: (3,914.0 + 2,248.0) / 35,803.0 = 0.17x",
+        "model": "",
+        "mark": "correct",
+        "correction": "",
+        "number": "0.17x"
+      },
+      {
+        "id": 31,
+        "part": "Market Positioning and Growth Outlook",
+        "cite": "[ratio debt_to_equity: (34,624.0 + 3,542.0) / 99,617.0]",
+        "code": "recomputed: (34,624.0 + 3,542.0) / 99,617.0 = 0.38x",
+        "model": "",
+        "mark": "correct",
+        "correction": "",
+        "number": "0.38x"
+      },
+      {
+        "id": 32,
+        "part": "Market Positioning and Growth Outlook",
+        "cite": "[ratio debt_to_equity: (14,326.0 + 2,130.0) / 16,165.0]",
+        "code": "recomputed: (14,326.0 + 2,130.0) / 16,165.0 = 1.02x",
+        "model": "",
+        "mark": "correct",
+        "correction": "",
+        "number": "1.02x"
+      },
+      {
+        "id": 33,
+        "part": "Market Positioning and Growth Outlook",
+        "cite": "[ratio debt_to_equity: (399.1 + 120.0) / 2,197.7]",
+        "code": "recomputed: (399.1 + 120.0) / 2,197.7 = 0.24x",
+        "model": "",
+        "mark": "correct",
+        "correction": "",
+        "number": "0.24x"
+      },
+      {
+        "id": 34,
+        "part": "Market Positioning and Growth Outlook",
+        "cite": "[ratio free_cash_flow: 15,817.0 - 6,435.0]",
+        "code": "recomputed: 15,817.0 - 6,435.0 = $9,382.0M",
+        "model": "",
+        "mark": "correct",
+        "correction": "",
+        "number": "$9,382.0M"
+      },
+      {
+        "id": 35,
+        "part": "Market Positioning and Growth Outlook",
+        "cite": "[ratio free_cash_flow: 41,565.0 - 26,642.0]",
+        "code": "recomputed: 41,565.0 - 26,642.0 = $14,923.0M",
+        "model": "",
+        "mark": "correct",
+        "correction": "",
+        "number": "$14,923.0M"
+      },
+      {
+        "id": 36,
+        "part": "Market Positioning and Growth Outlook",
+        "cite": "[ratio free_cash_flow: 6,562.0 - 3,727.0]",
+        "code": "recomputed: 6,562.0 - 3,727.0 = $2,835.0M",
+        "model": "",
+        "mark": "correct",
+        "correction": "",
+        "number": "$2,835.0M"
+      },
+      {
+        "id": 37,
+        "part": "Market Positioning and Growth Outlook",
+        "cite": "[ratio free_cash_flow: 1,030.1 - 702.0]",
+        "code": "recomputed: 1,030.1 - 702.0 = $328.1M",
+        "model": "",
+        "mark": "correct",
+        "correction": "",
+        "number": "$328.1M"
+      },
+      {
+        "id": 38,
+        "part": "Valuation Insights",
+        "cite": "[XBRL COST us-gaap:OperatingIncomeLoss 2026-08-30]",
+        "code": "equals the facts file",
+        "model": "",
+        "mark": "correct",
+        "correction": "",
+        "number": "$11,685.0M"
+      },
+      {
+        "id": 39,
+        "part": "Valuation Insights",
+        "cite": "[ratio operating_margin: 11,685.0 / 303,154.0]",
+        "code": "recomputed: 11,685.0 / 303,154.0 = 3.85%",
+        "model": "",
+        "mark": "correct",
+        "correction": "",
+        "number": "3.85%"
+      },
+      {
+        "id": 40,
+        "part": "Valuation Insights",
+        "cite": "[XBRL COST us-gaap:NetIncomeLoss 2026-08-30]",
+        "code": "equals the facts file",
+        "model": "",
+        "mark": "correct",
+        "correction": "",
+        "number": "$9,226.0M"
+      },
+      {
+        "id": 41,
+        "part": "Valuation Insights",
+        "cite": "[ratio net_margin: 9,226.0 / 303,154.0]",
+        "code": "recomputed: 9,226.0 / 303,154.0 = 3.04%",
+        "model": "",
+        "mark": "correct",
+        "correction": "",
+        "number": "3.04%"
+      },
+      {
+        "id": 42,
+        "part": "Valuation Insights",
+        "cite": "[XBRL COST us-gaap:EarningsPerShareDiluted 2026-08-30]",
+        "code": "facts file has 20.76",
+        "model": "",
+        "mark": "wrong",
+        "correction": "$20.76 [XBRL COST us-gaap:EarningsPerShareDiluted 2026-08-30; 10-K L1134]",
+        "number": "$21.76"
+      },
+      {
+        "id": 43,
+        "part": "Valuation Insights",
+        "cite": "[ratio roae: 9,226.0 / ((35,803.0 + 29,164.0) / 2)]",
+        "code": "recomputed: 9,226.0 / ((35,803.0 + 29,164.0) / 2) = 28.40%",
+        "model": "",
+        "mark": "correct",
+        "correction": "",
+        "number": "28.40%"
+      },
+      {
+        "id": 44,
+        "part": "Valuation Insights",
+        "cite": "[ratio debt_to_equity: (3,914.0 + 2,248.0) / 35,803.0]",
+        "code": "recomputed: (3,914.0 + 2,248.0) / 35,803.0 = 0.17x",
+        "model": "",
+        "mark": "correct",
+        "correction": "",
+        "number": "0.17x"
+      },
+      {
+        "id": 45,
+        "part": "Valuation Insights",
+        "cite": "[ratio free_cash_flow: 15,817.0 - 6,435.0]",
+        "code": "recomputed: 15,817.0 - 6,435.0 = $9,382.0M",
+        "model": "",
+        "mark": "correct",
+        "correction": "",
+        "number": "$9,382.0M"
+      },
+      {
+        "id": 46,
+        "part": "Valuation Insights",
+        "cite": "[ratio fcf_margin: (15,817.0 - 6,435.0) / 303,154.0]",
+        "code": "recomputed: (15,817.0 - 6,435.0) / 303,154.0 = 3.09%",
+        "model": "",
+        "mark": "correct",
+        "correction": "",
+        "number": "3.09%"
+      },
+      {
+        "id": 47,
+        "part": "Valuation Insights",
+        "cite": "[price given with --price]",
+        "code": "equals the price given (992.13)",
+        "model": "",
+        "mark": "correct",
+        "correction": "",
+        "number": "$992.13"
+      },
+      {
+        "id": 48,
+        "part": "Valuation Insights",
+        "cite": "[ratio pe: 992.13 / 20.76]",
+        "code": "recomputed: 992.13 / 20.76 = 47.79x",
+        "model": "",
+        "mark": "correct",
+        "correction": "",
+        "number": "47.79x"
+      },
+      {
+        "id": 49,
+        "part": "Valuation Insights",
+        "cite": "",
+        "code": "no source",
+        "model": "",
+        "mark": "unsupported",
+        "correction": "[Release L16]",
+        "number": "11.2"
+      },
+      {
+        "id": 50,
+        "part": "Valuation Insights",
+        "cite": "",
+        "code": "no source",
+        "model": "",
+        "mark": "unsupported",
+        "correction": "[Release L16]",
+        "number": "$93.9 billion"
+      },
+      {
+        "id": 51,
+        "part": "Future Developments and Strategic Recommendations",
+        "cite": "[10-K L734: \"received $184, made up of $174 in refunds\"]",
+        "code": "quote found on L732, not the cited line; line found in the filing; number is on the line",
+        "model": "states_it: The line states $174 in refunds were received.",
+        "mark": "correct",
+        "correction": "",
+        "number": "$174"
+      },
+      {
+        "id": 52,
+        "part": "Future Developments and Strategic Recommendations",
+        "cite": "[10-K L734: \"received $184, made up of $174 in refunds\"]",
+        "code": "quote found on L732, not the cited line; line found in the filing; number is on the line",
+        "model": "states_it: The line states $10 of interest income was recorded.",
+        "mark": "correct",
+        "correction": "",
+        "number": "$10"
+      },
+      {
+        "id": 53,
+        "part": "Future Developments and Strategic Recommendations",
+        "cite": "[10-K L726: \"approved a 13% increase in the quarterly cash dividend\"]",
+        "code": "line found in the filing; number is on the line",
+        "model": "states_it: The line confirms a 13% increase in the quarterly cash dividend was approved.",
+        "mark": "correct",
+        "correction": "",
+        "number": "13%"
+      },
+      {
+        "id": 54,
+        "part": "Future Developments and Strategic Recommendations",
+        "cite": "[10-K L904: \"spent $6,435 on capital expenditures\"]",
+        "code": "line found in the filing; number is on the line",
+        "model": "states_it: The line reports capital expenditures of $6,435 in 2026.",
+        "mark": "correct",
+        "correction": "",
+        "number": "$6,435"
+      },
+      {
+        "id": 55,
+        "part": "Future Developments and Strategic Recommendations",
+        "cite": "[10-K L904: \"spent $6,435 on capital expenditures\"]",
+        "code": "line found in the filing; number is on the line",
+        "model": "states_it: The line states the intention to spend approximately $7,500 in fiscal 2027.",
+        "mark": "correct",
+        "correction": "",
+        "number": "$7,500"
+      },
+      {
+        "id": 56,
+        "part": "Future Developments and Strategic Recommendations",
+        "cite": "[10-K L928: \"borrowing capacity ... $2,118\"]",
+        "code": "line found in the filing; number is on the line",
+        "model": "states_it: The line indicates borrowing capacity of $2,118 as of August 30, 2026.",
+        "mark": "correct",
+        "correction": "",
+        "number": "$2,118"
+      },
+      {
+        "id": 57,
+        "part": "Future Developments and Strategic Recommendations",
+        "cite": "[Release L32: \"Digitally-Enabled 20.9%\"]",
+        "code": "quoted words are not in the filing",
+        "model": "",
+        "mark": "unsupported",
+        "correction": "",
+        "number": "20.9%"
+      },
+      {
+        "id": 58,
+        "part": "Future Developments and Strategic Recommendations",
+        "cite": "[Release L36: \"non-recurring benefit of $0.15 per diluted share\"]",
+        "code": "line found in the filing; number is on the line",
+        "model": "states_it: The line mentions a non‑recurring benefit of $0.15 per diluted share from tariff refunds.",
+        "mark": "correct",
+        "correction": "",
+        "number": "$0.15"
+      },
+      {
+        "id": 59,
+        "part": "Future Developments and Strategic Recommendations",
+        "cite": "[10-K L716]",
+        "code": "line found in the filing; number is on the line",
+        "model": "states_it: The line shows membership fee revenue increased 11%.",
+        "mark": "correct",
+        "correction": "",
+        "number": "11%"
+      },
+      {
+        "id": 60,
+        "part": "Future Developments and Strategic Recommendations",
+        "cite": "[10-K L716]",
+        "code": "line found in the filing; number is on the line",
+        "model": "states_it: The line reports membership fee revenue of $5,907 (in millions), matching $5,907 million.",
+        "mark": "correct",
+        "correction": "",
+        "number": "$5,907 million"
+      },
+      {
+        "id": 61,
+        "part": "Future Developments and Strategic Recommendations",
+        "cite": "[10-K L214]",
+        "code": "line found in the filing; number is on the line",
+        "model": "states_it: The line confirms the U.S. annual membership fee is $65.",
+        "mark": "correct",
+        "correction": "",
+        "number": "$65"
+      },
+      {
+        "id": 62,
+        "part": "Future Developments and Strategic Recommendations",
+        "cite": "[ratio free_cash_flow]",
+        "code": "citation is not [ratio name: arithmetic]",
+        "model": "",
+        "mark": "unsupported",
+        "correction": "",
+        "number": "$9,382 million"
+      },
+      {
+        "id": 63,
+        "part": "Future Developments and Strategic Recommendations",
+        "cite": "[ratio fcf_margin]",
+        "code": "citation is not [ratio name: arithmetic]",
+        "model": "",
+        "mark": "unsupported",
+        "correction": "[ratio fcf_margin: (15,817.0 - 6,435.0) / 303,154.0]",
+        "number": "3.09%"
+      },
+      {
+        "id": 64,
+        "part": "Future Developments and Strategic Recommendations",
+        "cite": "[ratio operating_margin]",
+        "code": "citation is not [ratio name: arithmetic]",
+        "model": "",
+        "mark": "unsupported",
+        "correction": "[ratio operating_margin: 11,685.0 / 303,154.0]",
+        "number": "3.85%"
+      },
+      {
+        "id": 65,
+        "part": "Future Developments and Strategic Recommendations",
+        "cite": "[Release L32]",
+        "code": "line found in the filing; number is on the line",
+        "model": "states_it: The table line includes a 20.9% digitally‑enabled sales share, matching the reported figure.",
+        "mark": "correct",
+        "correction": "",
+        "number": "20.9%"
+      },
+      {
+        "id": 66,
+        "part": "Future Developments and Strategic Recommendations",
+        "cite": "[ratio debt_to_equity]",
+        "code": "citation is not [ratio name: arithmetic]",
+        "model": "",
+        "mark": "unsupported",
+        "correction": "[ratio debt_to_equity: (3,914.0 + 2,248.0) / 35,803.0]",
+        "number": "0.17x"
+      },
+      {
+        "id": 67,
+        "part": "Future Developments and Strategic Recommendations",
+        "cite": "[ratio revenue_growth]",
+        "code": "citation is not [ratio name: arithmetic]",
+        "model": "",
+        "mark": "unsupported",
+        "correction": "[ratio revenue_growth: (303,154.0 - 275,235.0) / 275,235.0]",
+        "number": "10.14%"
+      },
+      {
+        "id": 68,
+        "part": "Future Developments and Strategic Recommendations",
+        "cite": "[ratio quarter_revenue_growth]",
+        "code": "citation is not [ratio name: arithmetic]",
+        "model": "",
+        "mark": "unsupported",
+        "correction": "[ratio quarter_revenue_growth: (95,723 - 86,156) / 86,156]",
+        "number": "11.10%"
+      },
+      {
+        "id": 69,
+        "part": "Future Developments and Strategic Recommendations",
+        "cite": "",
+        "code": "no source",
+        "model": "",
+        "mark": "unsupported",
+        "correction": "[ratio operating_margin: 11,685.0 / 303,154.0]",
+        "number": "3.85%"
+      },
+      {
+        "id": 70,
+        "part": "Future Developments and Strategic Recommendations",
+        "cite": "",
+        "code": "no source",
+        "model": "",
+        "mark": "unsupported",
+        "correction": "[10-Q L696]",
+        "number": "$65"
+      },
+      {
+        "id": 71,
+        "part": "Future Developments and Strategic Recommendations",
+        "cite": "",
+        "code": "no source",
+        "model": "",
+        "mark": "unsupported",
+        "correction": "no source found in the filings or facts",
+        "number": "$9,382 million"
+      },
+      {
+        "id": 72,
+        "part": "Future Developments and Strategic Recommendations",
+        "cite": "",
+        "code": "no source",
+        "model": "",
+        "mark": "unsupported",
+        "correction": "[ratio debt_to_equity: (3,914.0 + 2,248.0) / 35,803.0]",
+        "number": "0.17x"
+      },
+      {
+        "id": 73,
+        "part": "Future Developments and Strategic Recommendations",
+        "cite": "[Release L36]",
+        "code": "line found in the filing; number is on the line",
+        "model": "states_it: The line repeats the $0.15 per diluted share non‑recurring benefit from tariff refunds.",
+        "mark": "correct",
+        "correction": "",
+        "number": "$0.15"
+      },
+      {
+        "id": 74,
+        "part": "Investment Recommendation",
+        "cite": "[ratio roae: 9,226.0 / ((35,803.0 + 29,164.0) / 2)]",
+        "code": "recomputed: 9,226.0 / ((35,803.0 + 29,164.0) / 2) = 28.40%",
+        "model": "",
+        "mark": "correct",
+        "correction": "",
+        "number": "28.40%"
+      },
+      {
+        "id": 75,
+        "part": "Investment Recommendation",
+        "cite": "",
+        "code": "no source",
+        "model": "",
+        "mark": "unsupported",
+        "correction": "[ratio roae: 9,226.0 / ((35,803.0 + 29,164.0) / 2)]",
+        "number": "28.40%"
+      },
+      {
+        "id": 76,
+        "part": "Investment Recommendation",
+        "cite": "",
+        "code": "no source",
+        "model": "",
+        "mark": "unsupported",
+        "correction": "[ratio roae: 21,893.0 / ((99,617.0 + 91,013.0) / 2)]",
+        "number": "22.97%"
+      },
+      {
+        "id": 77,
+        "part": "Investment Recommendation",
+        "cite": "",
+        "code": "no source",
+        "model": "",
+        "mark": "unsupported",
+        "correction": "[ratio roae: 3,705.0 / ((16,165.0 + 14,666.0) / 2)]",
+        "number": "24.03%"
+      },
+      {
+        "id": 78,
+        "part": "Investment Recommendation",
+        "cite": "",
+        "code": "no source",
+        "model": "",
+        "mark": "unsupported",
+        "correction": "[ratio roae: 578.4 / ((2,197.7 + 1,847.5) / 2)]",
+        "number": "28.60%"
+      }
+    ]
+  }
+}

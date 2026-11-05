@@ -1,0 +1,805 @@
+{
+  "node": "Financial Analyst",
+  "input": {
+    "task": "Write the statement analysis: growth, profitability, returns, leverage, cash flow and valuation from the facts and ratios, the latest quarter from the release, and the peer comparison.",
+    "context": {
+      "company": {
+        "name": "ELI LILLY & Co",
+        "ticker": "LLY",
+        "fiscal_year_end": "2025-12-31",
+        "prior_fiscal_year_end": "2024-12-31"
+      },
+      "share_price": {
+        "value": "$1,367.71",
+        "citation": "[price given with --price]"
+      },
+      "facts": [
+        {
+          "item": "Total revenue",
+          "period": "FY",
+          "period_end": "2025-12-31",
+          "value": "$65,179.0M",
+          "citation": "[XBRL LLY us-gaap:Revenues 2025-12-31]"
+        },
+        {
+          "item": "Total revenue",
+          "period": "prior FY",
+          "period_end": "2024-12-31",
+          "value": "$45,043.0M",
+          "citation": "[XBRL LLY us-gaap:Revenues 2024-12-31]"
+        },
+        {
+          "item": "Operating income",
+          "period": "FY",
+          "value": "not reported",
+          "note": "No annual 10-K data for any candidate tag."
+        },
+        {
+          "item": "Net income",
+          "period": "FY",
+          "period_end": "2025-12-31",
+          "value": "$20,640.0M",
+          "citation": "[XBRL LLY us-gaap:NetIncomeLoss 2025-12-31]"
+        },
+        {
+          "item": "Net income",
+          "period": "prior FY",
+          "period_end": "2024-12-31",
+          "value": "$10,590.0M",
+          "citation": "[XBRL LLY us-gaap:NetIncomeLoss 2024-12-31]"
+        },
+        {
+          "item": "Diluted EPS",
+          "period": "FY",
+          "period_end": "2025-12-31",
+          "value": "$22.95",
+          "citation": "[XBRL LLY us-gaap:EarningsPerShareDiluted 2025-12-31]"
+        },
+        {
+          "item": "Diluted EPS",
+          "period": "prior FY",
+          "period_end": "2024-12-31",
+          "value": "$11.71",
+          "citation": "[XBRL LLY us-gaap:EarningsPerShareDiluted 2024-12-31]"
+        },
+        {
+          "item": "Stockholders' equity",
+          "period": "FY",
+          "period_end": "2025-12-31",
+          "value": "$26,535.0M",
+          "citation": "[XBRL LLY us-gaap:StockholdersEquity 2025-12-31]"
+        },
+        {
+          "item": "Stockholders' equity",
+          "period": "prior FY",
+          "period_end": "2024-12-31",
+          "value": "$14,272.0M",
+          "citation": "[XBRL LLY us-gaap:StockholdersEquity 2024-12-31]"
+        },
+        {
+          "item": "Long-term debt (noncurrent)",
+          "period": "FY",
+          "period_end": "2025-12-31",
+          "value": "$40,868.0M",
+          "citation": "[XBRL LLY us-gaap:LongTermDebtNoncurrent 2025-12-31]"
+        },
+        {
+          "item": "Long-term debt (noncurrent)",
+          "period": "prior FY",
+          "period_end": "2024-12-31",
+          "value": "$28,527.0M",
+          "citation": "[XBRL LLY us-gaap:LongTermDebtNoncurrent 2024-12-31]"
+        },
+        {
+          "item": "Current portion of long-term debt",
+          "period": "FY",
+          "period_end": "2025-12-31",
+          "value": "$1,635.0M",
+          "citation": "[XBRL LLY us-gaap:DebtCurrent 2025-12-31]"
+        },
+        {
+          "item": "Current portion of long-term debt",
+          "period": "prior FY",
+          "period_end": "2024-12-31",
+          "value": "$5,117.0M",
+          "citation": "[XBRL LLY us-gaap:DebtCurrent 2024-12-31]"
+        },
+        {
+          "item": "Cash from operations",
+          "period": "FY",
+          "period_end": "2025-12-31",
+          "value": "$16,813.0M",
+          "citation": "[XBRL LLY us-gaap:NetCashProvidedByUsedInOperatingActivities 2025-12-31]"
+        },
+        {
+          "item": "Cash from operations",
+          "period": "prior FY",
+          "period_end": "2024-12-31",
+          "value": "$8,818.0M",
+          "citation": "[XBRL LLY us-gaap:NetCashProvidedByUsedInOperatingActivities 2024-12-31]"
+        },
+        {
+          "item": "Additions to property and equipment",
+          "period": "FY",
+          "value": "not reported",
+          "note": "No annual 10-K data for any candidate tag."
+        }
+      ],
+      "ratios": [
+        {
+          "name": "revenue_growth",
+          "definition": "(total revenue FY - total revenue prior FY) / total revenue prior FY",
+          "value": "44.70%",
+          "citation": "[ratio revenue_growth: (65,179.0 - 45,043.0) / 45,043.0]"
+        },
+        {
+          "name": "net_margin",
+          "definition": "net income FY / total revenue FY",
+          "value": "31.67%",
+          "citation": "[ratio net_margin: 20,640.0 / 65,179.0]"
+        },
+        {
+          "name": "roae",
+          "definition": "net income FY / ((stockholders' equity FY + stockholders' equity prior FY) / 2)",
+          "value": "101.16%",
+          "citation": "[ratio roae: 20,640.0 / ((26,535.0 + 14,272.0) / 2)]"
+        },
+        {
+          "name": "debt_to_equity",
+          "definition": "(noncurrent long-term debt + current portion of debt) / stockholders' equity, FY end",
+          "value": "1.60x",
+          "citation": "[ratio debt_to_equity: (40,868.0 + 1,635.0) / 26,535.0]"
+        },
+        {
+          "name": "pe",
+          "definition": "share price given with --price / GAAP diluted EPS FY",
+          "value": "59.60x",
+          "citation": "[ratio pe: 1367.71 / 22.95]"
+        },
+        {
+          "name": "quarter_revenue_growth",
+          "definition": "(quarter's total revenue - same quarter last year) / same quarter last year, from the earnings-release table",
+          "value": "38.61%",
+          "citation": "[ratio quarter_revenue_growth: (24,397 - 17,601) / 17,601]"
+        }
+      ],
+      "alternative_definitions_in_xbrl": [],
+      "quarter_from_earnings_release": {
+        "accession": "0000059478-26-000104",
+        "table_rows_found_in_code": {
+          "revenue": {
+            "line": 146,
+            "label": "Total Revenue",
+            "column_dates": [
+              "2026-12-31",
+              "2025-12-31",
+              "-",
+              "2026-12-31",
+              "2025-12-31",
+              "-"
+            ],
+            "quarter_value": "$24,397M",
+            "same_quarter_last_year_value": "$17,601M",
+            "citation": "[Release L146: \"Total Revenue | 24,397 | 17,601\"]",
+            "growth_ratio": {
+              "ticker": "LLY",
+              "name": "quarter_revenue_growth",
+              "definition": "(quarter's total revenue - same quarter last year) / same quarter last year, from the earnings-release table",
+              "value": "38.61%",
+              "citation": "[ratio quarter_revenue_growth: (24,397 - 17,601) / 17,601]",
+              "number": 0.3861144253167434
+            }
+          },
+          "diluted_eps": {
+            "line": 376,
+            "label": "Earnings per share (diluted) - Reported",
+            "quarter_value": "$7.22",
+            "column": "2026-12-31",
+            "citation": "[Release L376: \"Earnings per share (diluted) - Reported | $7.22\"]",
+            "note": "check that this row is GAAP, not adjusted"
+          }
+        },
+        "revenue_lines": [
+          {
+            "line": "L88",
+            "text": "On a non-GAAP basis, Q3 2026 gross margin increased 40% to $20.6 billion. Gross margin as a percent of revenue was 84.4%, an increase of 0.8 percentage points versus the same quarter last year. The"
+          },
+          {
+            "line": "L146",
+            "text": "Total Revenue | 24,397 | 17,601 | 39% | 67,170 | 45,887 | 46%"
+          },
+          {
+            "line": "L46",
+            "text": "Revenue | $24,397 | $17,601 | 39%"
+          },
+          {
+            "line": "L224",
+            "text": "Revenue | $85 to $87 billion | $91 to $92 billion"
+          },
+          {
+            "line": "L284",
+            "text": "Revenue | $24,397 | $17,601 | 39% | $67,170 | $45,887 | 46%"
+          }
+        ],
+        "diluted_eps_lines": [
+          {
+            "line": "L310",
+            "text": "Earnings per share - diluted | $7.22 | $6.21 | 16% | $23.42 | $15.56 | 51%"
+          },
+          {
+            "line": "L376",
+            "text": "Earnings per share (diluted) - Reported | $7.22 | $6.21 | $23.42 | $15.56"
+          },
+          {
+            "line": "L378",
+            "text": "Earnings per share (diluted) - Non-GAAP | $7.48 | $7.02 | $24.41 | $16.67"
+          }
+        ]
+      },
+      "peers": {
+        "MRK": {
+          "name": "Merck & Co., Inc.",
+          "fiscal_year_end": "2025-12-31",
+          "facts": [
+            {
+              "item": "Total revenue",
+              "period": "FY",
+              "period_end": "2025-12-31",
+              "value": "$65,011.0M",
+              "citation": "[XBRL MRK us-gaap:Revenues 2025-12-31]"
+            },
+            {
+              "item": "Total revenue",
+              "period": "prior FY",
+              "period_end": "2024-12-31",
+              "value": "$64,168.0M",
+              "citation": "[XBRL MRK us-gaap:Revenues 2024-12-31]"
+            },
+            {
+              "item": "Operating income",
+              "period": "FY",
+              "value": "not reported",
+              "note": "No annual 10-K data for any candidate tag."
+            },
+            {
+              "item": "Net income",
+              "period": "FY",
+              "period_end": "2025-12-31",
+              "value": "$18,254.0M",
+              "citation": "[XBRL MRK us-gaap:NetIncomeLoss 2025-12-31]"
+            },
+            {
+              "item": "Net income",
+              "period": "prior FY",
+              "period_end": "2024-12-31",
+              "value": "$17,117.0M",
+              "citation": "[XBRL MRK us-gaap:NetIncomeLoss 2024-12-31]"
+            },
+            {
+              "item": "Diluted EPS",
+              "period": "FY",
+              "period_end": "2025-12-31",
+              "value": "$7.28",
+              "citation": "[XBRL MRK us-gaap:EarningsPerShareDiluted 2025-12-31]"
+            },
+            {
+              "item": "Diluted EPS",
+              "period": "prior FY",
+              "period_end": "2024-12-31",
+              "value": "$6.74",
+              "citation": "[XBRL MRK us-gaap:EarningsPerShareDiluted 2024-12-31]"
+            },
+            {
+              "item": "Stockholders' equity",
+              "period": "FY",
+              "period_end": "2025-12-31",
+              "value": "$52,606.0M",
+              "citation": "[XBRL MRK us-gaap:StockholdersEquity 2025-12-31]"
+            },
+            {
+              "item": "Stockholders' equity",
+              "period": "prior FY",
+              "period_end": "2024-12-31",
+              "value": "$46,313.0M",
+              "citation": "[XBRL MRK us-gaap:StockholdersEquity 2024-12-31]"
+            },
+            {
+              "item": "Long-term debt (noncurrent)",
+              "period": "FY",
+              "period_end": "2025-12-31",
+              "value": "$46,750.0M",
+              "citation": "[XBRL MRK us-gaap:LongTermDebtNoncurrent 2025-12-31]"
+            },
+            {
+              "item": "Long-term debt (noncurrent)",
+              "period": "prior FY",
+              "period_end": "2024-12-31",
+              "value": "$34,462.0M",
+              "citation": "[XBRL MRK us-gaap:LongTermDebtNoncurrent 2024-12-31]"
+            },
+            {
+              "item": "Current portion of long-term debt",
+              "period": "FY",
+              "period_end": "2025-12-31",
+              "value": "$2,300.0M",
+              "citation": "[XBRL MRK us-gaap:LongTermDebtCurrent 2025-12-31]"
+            },
+            {
+              "item": "Current portion of long-term debt",
+              "period": "prior FY",
+              "period_end": "2024-12-31",
+              "value": "$2,500.0M",
+              "citation": "[XBRL MRK us-gaap:LongTermDebtCurrent 2024-12-31]"
+            },
+            {
+              "item": "Cash from operations",
+              "period": "FY",
+              "period_end": "2025-12-31",
+              "value": "$16,472.0M",
+              "citation": "[XBRL MRK us-gaap:NetCashProvidedByUsedInOperatingActivities 2025-12-31]"
+            },
+            {
+              "item": "Cash from operations",
+              "period": "prior FY",
+              "period_end": "2024-12-31",
+              "value": "$21,468.0M",
+              "citation": "[XBRL MRK us-gaap:NetCashProvidedByUsedInOperatingActivities 2024-12-31]"
+            },
+            {
+              "item": "Additions to property and equipment",
+              "period": "FY",
+              "period_end": "2025-12-31",
+              "value": "$4,112.0M",
+              "citation": "[XBRL MRK us-gaap:PaymentsToAcquirePropertyPlantAndEquipment 2025-12-31]"
+            },
+            {
+              "item": "Additions to property and equipment",
+              "period": "prior FY",
+              "period_end": "2024-12-31",
+              "value": "$3,372.0M",
+              "citation": "[XBRL MRK us-gaap:PaymentsToAcquirePropertyPlantAndEquipment 2024-12-31]"
+            }
+          ],
+          "ratios": [
+            {
+              "name": "revenue_growth",
+              "definition": "(total revenue FY - total revenue prior FY) / total revenue prior FY",
+              "value": "1.31%",
+              "citation": "[ratio revenue_growth: (65,011.0 - 64,168.0) / 64,168.0]"
+            },
+            {
+              "name": "net_margin",
+              "definition": "net income FY / total revenue FY",
+              "value": "28.08%",
+              "citation": "[ratio net_margin: 18,254.0 / 65,011.0]"
+            },
+            {
+              "name": "roae",
+              "definition": "net income FY / ((stockholders' equity FY + stockholders' equity prior FY) / 2)",
+              "value": "36.91%",
+              "citation": "[ratio roae: 18,254.0 / ((52,606.0 + 46,313.0) / 2)]"
+            },
+            {
+              "name": "debt_to_equity",
+              "definition": "(noncurrent long-term debt + current portion of debt) / stockholders' equity, FY end",
+              "value": "0.93x",
+              "citation": "[ratio debt_to_equity: (46,750.0 + 2,300.0) / 52,606.0]"
+            },
+            {
+              "name": "free_cash_flow",
+              "definition": "cash from operations FY - additions to property and equipment FY, $ millions",
+              "value": "$12,360.0M",
+              "citation": "[ratio free_cash_flow: 16,472.0 - 4,112.0]"
+            },
+            {
+              "name": "fcf_margin",
+              "definition": "(cash from operations FY - additions to property and equipment FY) / total revenue FY",
+              "value": "19.01%",
+              "citation": "[ratio fcf_margin: (16,472.0 - 4,112.0) / 65,011.0]"
+            }
+          ]
+        },
+        "PFE": {
+          "name": "PFIZER INC",
+          "fiscal_year_end": "2025-12-31",
+          "facts": [
+            {
+              "item": "Total revenue",
+              "period": "FY",
+              "period_end": "2025-12-31",
+              "value": "$62,579.0M",
+              "citation": "[XBRL PFE us-gaap:Revenues 2025-12-31]"
+            },
+            {
+              "item": "Total revenue",
+              "period": "prior FY",
+              "period_end": "2024-12-31",
+              "value": "$63,627.0M",
+              "citation": "[XBRL PFE us-gaap:Revenues 2024-12-31]"
+            },
+            {
+              "item": "Operating income",
+              "period": "FY",
+              "value": "not reported",
+              "note": "No annual 10-K data for any candidate tag."
+            },
+            {
+              "item": "Net income",
+              "period": "FY",
+              "period_end": "2025-12-31",
+              "value": "$7,771.0M",
+              "citation": "[XBRL PFE us-gaap:NetIncomeLoss 2025-12-31]"
+            },
+            {
+              "item": "Net income",
+              "period": "prior FY",
+              "period_end": "2024-12-31",
+              "value": "$8,031.0M",
+              "citation": "[XBRL PFE us-gaap:NetIncomeLoss 2024-12-31]"
+            },
+            {
+              "item": "Diluted EPS",
+              "period": "FY",
+              "period_end": "2025-12-31",
+              "value": "$1.36",
+              "citation": "[XBRL PFE us-gaap:EarningsPerShareDiluted 2025-12-31]"
+            },
+            {
+              "item": "Diluted EPS",
+              "period": "prior FY",
+              "period_end": "2024-12-31",
+              "value": "$1.41",
+              "citation": "[XBRL PFE us-gaap:EarningsPerShareDiluted 2024-12-31]"
+            },
+            {
+              "item": "Stockholders' equity",
+              "period": "FY",
+              "period_end": "2025-12-31",
+              "value": "$86,476.0M",
+              "citation": "[XBRL PFE us-gaap:StockholdersEquity 2025-12-31]"
+            },
+            {
+              "item": "Stockholders' equity",
+              "period": "prior FY",
+              "period_end": "2024-12-31",
+              "value": "$88,203.0M",
+              "citation": "[XBRL PFE us-gaap:StockholdersEquity 2024-12-31]"
+            },
+            {
+              "item": "Long-term debt (noncurrent)",
+              "period": "FY",
+              "period_end": "2025-12-31",
+              "value": "$61,641.0M",
+              "citation": "[XBRL PFE us-gaap:LongTermDebtNoncurrent 2025-12-31]"
+            },
+            {
+              "item": "Long-term debt (noncurrent)",
+              "period": "prior FY",
+              "period_end": "2024-12-31",
+              "value": "$57,405.0M",
+              "citation": "[XBRL PFE us-gaap:LongTermDebtNoncurrent 2024-12-31]"
+            },
+            {
+              "item": "Current portion of long-term debt",
+              "period": "FY",
+              "period_end": "2025-12-31",
+              "value": "$2,997.0M",
+              "citation": "[XBRL PFE us-gaap:LongTermDebtCurrent 2025-12-31]"
+            },
+            {
+              "item": "Current portion of long-term debt",
+              "period": "prior FY",
+              "period_end": "2024-12-31",
+              "value": "$3,747.0M",
+              "citation": "[XBRL PFE us-gaap:LongTermDebtCurrent 2024-12-31]"
+            },
+            {
+              "item": "Cash from operations",
+              "period": "FY",
+              "period_end": "2025-12-31",
+              "value": "$11,704.0M",
+              "citation": "[XBRL PFE us-gaap:NetCashProvidedByUsedInOperatingActivities 2025-12-31]"
+            },
+            {
+              "item": "Cash from operations",
+              "period": "prior FY",
+              "period_end": "2024-12-31",
+              "value": "$12,744.0M",
+              "citation": "[XBRL PFE us-gaap:NetCashProvidedByUsedInOperatingActivities 2024-12-31]"
+            },
+            {
+              "item": "Additions to property and equipment",
+              "period": "FY",
+              "period_end": "2025-12-31",
+              "value": "$2,629.0M",
+              "citation": "[XBRL PFE us-gaap:PaymentsToAcquirePropertyPlantAndEquipment 2025-12-31]"
+            },
+            {
+              "item": "Additions to property and equipment",
+              "period": "prior FY",
+              "period_end": "2024-12-31",
+              "value": "$2,909.0M",
+              "citation": "[XBRL PFE us-gaap:PaymentsToAcquirePropertyPlantAndEquipment 2024-12-31]"
+            }
+          ],
+          "ratios": [
+            {
+              "name": "revenue_growth",
+              "definition": "(total revenue FY - total revenue prior FY) / total revenue prior FY",
+              "value": "-1.65%",
+              "citation": "[ratio revenue_growth: (62,579.0 - 63,627.0) / 63,627.0]"
+            },
+            {
+              "name": "net_margin",
+              "definition": "net income FY / total revenue FY",
+              "value": "12.42%",
+              "citation": "[ratio net_margin: 7,771.0 / 62,579.0]"
+            },
+            {
+              "name": "roae",
+              "definition": "net income FY / ((stockholders' equity FY + stockholders' equity prior FY) / 2)",
+              "value": "8.90%",
+              "citation": "[ratio roae: 7,771.0 / ((86,476.0 + 88,203.0) / 2)]"
+            },
+            {
+              "name": "debt_to_equity",
+              "definition": "(noncurrent long-term debt + current portion of debt) / stockholders' equity, FY end",
+              "value": "0.75x",
+              "citation": "[ratio debt_to_equity: (61,641.0 + 2,997.0) / 86,476.0]"
+            },
+            {
+              "name": "free_cash_flow",
+              "definition": "cash from operations FY - additions to property and equipment FY, $ millions",
+              "value": "$9,075.0M",
+              "citation": "[ratio free_cash_flow: 11,704.0 - 2,629.0]"
+            },
+            {
+              "name": "fcf_margin",
+              "definition": "(cash from operations FY - additions to property and equipment FY) / total revenue FY",
+              "value": "14.50%",
+              "citation": "[ratio fcf_margin: (11,704.0 - 2,629.0) / 62,579.0]"
+            }
+          ]
+        },
+        "ABBV": {
+          "name": "AbbVie Inc.",
+          "fiscal_year_end": "2025-12-31",
+          "facts": [
+            {
+              "item": "Total revenue",
+              "period": "FY",
+              "period_end": "2025-12-31",
+              "value": "$61,160.0M",
+              "citation": "[XBRL ABBV us-gaap:Revenues 2025-12-31]"
+            },
+            {
+              "item": "Total revenue",
+              "period": "prior FY",
+              "period_end": "2024-12-31",
+              "value": "$56,334.0M",
+              "citation": "[XBRL ABBV us-gaap:Revenues 2024-12-31]"
+            },
+            {
+              "item": "Operating income",
+              "period": "FY",
+              "period_end": "2025-12-31",
+              "value": "$15,075.0M",
+              "citation": "[XBRL ABBV us-gaap:OperatingIncomeLoss 2025-12-31]"
+            },
+            {
+              "item": "Operating income",
+              "period": "prior FY",
+              "period_end": "2024-12-31",
+              "value": "$9,137.0M",
+              "citation": "[XBRL ABBV us-gaap:OperatingIncomeLoss 2024-12-31]"
+            },
+            {
+              "item": "Net income",
+              "period": "FY",
+              "period_end": "2025-12-31",
+              "value": "$4,226.0M",
+              "citation": "[XBRL ABBV us-gaap:NetIncomeLoss 2025-12-31]"
+            },
+            {
+              "item": "Net income",
+              "period": "prior FY",
+              "period_end": "2024-12-31",
+              "value": "$4,278.0M",
+              "citation": "[XBRL ABBV us-gaap:NetIncomeLoss 2024-12-31]"
+            },
+            {
+              "item": "Diluted EPS",
+              "period": "FY",
+              "period_end": "2025-12-31",
+              "value": "$2.36",
+              "citation": "[XBRL ABBV us-gaap:EarningsPerShareDiluted 2025-12-31]"
+            },
+            {
+              "item": "Diluted EPS",
+              "period": "prior FY",
+              "period_end": "2024-12-31",
+              "value": "$2.39",
+              "citation": "[XBRL ABBV us-gaap:EarningsPerShareDiluted 2024-12-31]"
+            },
+            {
+              "item": "Stockholders' equity",
+              "period": "FY",
+              "period_end": "2025-12-31",
+              "value": "$-3,270.0M",
+              "citation": "[XBRL ABBV us-gaap:StockholdersEquity 2025-12-31]"
+            },
+            {
+              "item": "Stockholders' equity",
+              "period": "prior FY",
+              "period_end": "2024-12-31",
+              "value": "$3,325.0M",
+              "citation": "[XBRL ABBV us-gaap:StockholdersEquity 2024-12-31]"
+            },
+            {
+              "item": "Long-term debt (noncurrent)",
+              "period": "FY",
+              "period_end": "2025-12-31",
+              "value": "$58,941.0M",
+              "citation": "[XBRL ABBV us-gaap:LongTermDebtAndCapitalLeaseObligations 2025-12-31]"
+            },
+            {
+              "item": "Long-term debt (noncurrent)",
+              "period": "prior FY",
+              "period_end": "2024-12-31",
+              "value": "$60,340.0M",
+              "citation": "[XBRL ABBV us-gaap:LongTermDebtAndCapitalLeaseObligations 2024-12-31]"
+            },
+            {
+              "item": "Current portion of long-term debt",
+              "period": "FY",
+              "period_end": "2025-12-31",
+              "value": "$6,056.0M",
+              "citation": "[XBRL ABBV us-gaap:LongTermDebtAndCapitalLeaseObligationsCurrent 2025-12-31]"
+            },
+            {
+              "item": "Current portion of long-term debt",
+              "period": "prior FY",
+              "period_end": "2024-12-31",
+              "value": "$6,804.0M",
+              "citation": "[XBRL ABBV us-gaap:LongTermDebtAndCapitalLeaseObligationsCurrent 2024-12-31]"
+            },
+            {
+              "item": "Cash from operations",
+              "period": "FY",
+              "period_end": "2025-12-31",
+              "value": "$19,030.0M",
+              "citation": "[XBRL ABBV us-gaap:NetCashProvidedByUsedInOperatingActivities 2025-12-31]"
+            },
+            {
+              "item": "Cash from operations",
+              "period": "prior FY",
+              "period_end": "2024-12-31",
+              "value": "$18,806.0M",
+              "citation": "[XBRL ABBV us-gaap:NetCashProvidedByUsedInOperatingActivities 2024-12-31]"
+            },
+            {
+              "item": "Additions to property and equipment",
+              "period": "FY",
+              "period_end": "2025-12-31",
+              "value": "$1,214.0M",
+              "citation": "[XBRL ABBV us-gaap:PaymentsToAcquirePropertyPlantAndEquipment 2025-12-31]"
+            },
+            {
+              "item": "Additions to property and equipment",
+              "period": "prior FY",
+              "period_end": "2024-12-31",
+              "value": "$974.0M",
+              "citation": "[XBRL ABBV us-gaap:PaymentsToAcquirePropertyPlantAndEquipment 2024-12-31]"
+            }
+          ],
+          "ratios": [
+            {
+              "name": "revenue_growth",
+              "definition": "(total revenue FY - total revenue prior FY) / total revenue prior FY",
+              "value": "8.57%",
+              "citation": "[ratio revenue_growth: (61,160.0 - 56,334.0) / 56,334.0]"
+            },
+            {
+              "name": "operating_margin",
+              "definition": "operating income FY / total revenue FY",
+              "value": "24.65%",
+              "citation": "[ratio operating_margin: 15,075.0 / 61,160.0]"
+            },
+            {
+              "name": "net_margin",
+              "definition": "net income FY / total revenue FY",
+              "value": "6.91%",
+              "citation": "[ratio net_margin: 4,226.0 / 61,160.0]"
+            },
+            {
+              "name": "roae",
+              "definition": "net income FY / ((stockholders' equity FY + stockholders' equity prior FY) / 2)",
+              "value": "15367.27%",
+              "citation": "[ratio roae: 4,226.0 / ((-3,270.0 + 3,325.0) / 2)]"
+            },
+            {
+              "name": "debt_to_equity",
+              "definition": "(noncurrent long-term debt + current portion of debt) / stockholders' equity, FY end",
+              "value": "-19.88x",
+              "citation": "[ratio debt_to_equity: (58,941.0 + 6,056.0) / -3,270.0]"
+            },
+            {
+              "name": "free_cash_flow",
+              "definition": "cash from operations FY - additions to property and equipment FY, $ millions",
+              "value": "$17,816.0M",
+              "citation": "[ratio free_cash_flow: 19,030.0 - 1,214.0]"
+            },
+            {
+              "name": "fcf_margin",
+              "definition": "(cash from operations FY - additions to property and equipment FY) / total revenue FY",
+              "value": "29.13%",
+              "citation": "[ratio fcf_margin: (19,030.0 - 1,214.0) / 61,160.0]"
+            }
+          ]
+        }
+      }
+    },
+    "expected_output": "JSON with 'growth_and_peers' (growth, the quarter and the peer comparison), 'valuation_insights' (profitability, returns, leverage, free cash flow, P/E), 'definitions' and 'insight' (one line starting 'Insight:'). Every number copied with its citation."
+  },
+  "output": {
+    "growth_and_peers": "### Growth\n- **Revenue FY 2025**: $65,179.0M [XBRL LLY us-gaap:Revenues 2025-12-31]\n- **Revenue growth YoY**: 44.70% [ratio revenue_growth: (65,179.0 - 45,043.0) / 45,043.0]\n- **Quarter Revenue (Q3 2026)**: $24,397M [Release L146: \"Total Revenue | 24,397 | 17,601\"]\n- **Quarter revenue growth QoQ**: 38.61% [ratio quarter_revenue_growth: (24,397 - 17,601) / 17,601]\n- **Quarter diluted EPS (Q3 2026)**: $7.22 [Release L376: \"Earnings per share (diluted) - Reported | $7.22\"]\n- **Peer revenue growth FY 2025**:\n  - Merck (MRK): 1.31% [ratio revenue_growth: (65,011.0 - 64,168.0) / 64,168.0]\n  - Pfizer (PFE): -1.65% [ratio revenue_growth: (62,579.0 - 63,627.0) / 63,627.0]\n  - AbbVie (ABBV): 8.57% [ratio revenue_growth: (61,160.0 - 56,334.0) / 56,334.0]",
+    "valuation_insights": "### Profitability\n- **Net income**: $20,640.0M [XBRL LLY us-gaap:NetIncomeLoss 2025-12-31]\n- **GAAP diluted EPS**: $22.95 [XBRL LLY us-gaap:EarningsPerShareDiluted 2025-12-31]\n- **Net margin**: 31.67% [ratio net_margin: 20,640.0 / 65,179.0]\n- **Operating margin**: not computed (operating income not reported)\n\n### Returns\n- **Return on average equity (ROAE)**: 101.16% [ratio roae: 20,640.0 / ((26,535.0 + 14,272.0) / 2)]\n\n### Leverage\n- **Debt to equity (incl. current portion)**: 1.60x [ratio debt_to_equity: (40,868.0 + 1,635.0) / 26,535.0]\n- Alternative definition (total liabilities ÷ equity) not used.\n\n### Cash Flow\n- **Free cash flow**: not computed (additions to property and equipment not reported)\n\n### Valuation\n- **P/E ratio**: 59.60x [ratio pe: 1367.71 / 22.95]",
+    "definitions": [
+      {
+        "item": "Revenue",
+        "definition_used": "GAAP total revenue as reported in XBRL tag us-gaap:Revenues",
+        "alternative": "Total revenue (non‑GAAP) if available",
+        "source": "[XBRL LLY us-gaap:Revenues 2025-12-31]"
+      },
+      {
+        "item": "Diluted EPS",
+        "definition_used": "GAAP diluted earnings per share from XBRL tag us-gaap:EarningsPerShareDiluted",
+        "alternative": "Non‑GAAP diluted EPS",
+        "source": "[XBRL LLY us-gaap:EarningsPerShareDiluted 2025-12-31]"
+      },
+      {
+        "item": "Operating margin",
+        "definition_used": "Operating income ÷ total revenue (not computed due to missing operating income)",
+        "alternative": "Operating income as reported",
+        "source": "not reported"
+      },
+      {
+        "item": "Debt to equity",
+        "definition_used": "(non‑current long‑term debt + current portion of long‑term debt) ÷ stockholders' equity at FY end",
+        "alternative": "Total liabilities ÷ equity (not used)",
+        "source": "[ratio debt_to_equity: (40,868.0 + 1,635.0) / 26,535.0]"
+      },
+      {
+        "item": "Free cash flow",
+        "definition_used": "Cash from operations minus capital expenditures (additions to property and equipment)",
+        "alternative": "None",
+        "source": "not computed"
+      },
+      {
+        "item": "Return on average equity",
+        "definition_used": "Net income ÷ average stockholders' equity",
+        "alternative": "None",
+        "source": "[ratio roae: 20,640.0 / ((26,535.0 + 14,272.0) / 2)]"
+      },
+      {
+        "item": "Net margin",
+        "definition_used": "Net income ÷ total revenue",
+        "alternative": "None",
+        "source": "[ratio net_margin: 20,640.0 / 65,179.0]"
+      },
+      {
+        "item": "Quarterly revenue",
+        "definition_used": "Total revenue for the quarter as presented in the earnings release",
+        "alternative": "None",
+        "source": "[Release L146: \"Total Revenue | 24,397 | 17,601\"]"
+      },
+      {
+        "item": "Quarterly diluted EPS",
+        "definition_used": "GAAP diluted EPS from the earnings release",
+        "alternative": "Non‑GAAP diluted EPS",
+        "source": "[Release L376: \"Earnings per share (diluted) - Reported | $7.22\"]"
+      }
+    ],
+    "insight": "Insight: The company’s FY revenue grew 44.70% YoY to $65,179.0M, far outpacing peers MRK (1.31%), PFE (-1.65%) and ABBV (8.57%) [ratio revenue_growth: (65,179.0 - 45,043.0) / 45,043.0]"
+  }
+}
